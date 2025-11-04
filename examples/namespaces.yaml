@@ -1,0 +1,38 @@
+# Namespace Registry (Reference)
+#
+# Documents namespace conventions for example packs.
+# This is for reference only - no catalog registry exists.
+#
+# When creating your own packs:
+# 1. Use a unique namespace (e.g., packs/yourorg/*)
+# 2. Share via GitHub URLs or local files
+# 3. No registration required
+
+version: "1.0.0"
+updated_at: "2025-10-31T00:00:00.000Z"
+
+namespaces:
+  # AlignTrue org namespaces
+  - namespace: "packs/aligntrue/*"
+    owner: "AlignTrue"
+    notes: "Official AlignTrue maintained packs"
+
+  # Base namespace (for core packs)
+  - namespace: "packs/base/*"
+    owner: "AlignTrue"
+    notes: "Core base packs (base-global, base-docs, etc.)"
+
+  # Stacks namespace (for framework/platform-specific packs)
+  - namespace: "packs/stacks/*"
+    owner: "AlignTrue"
+    notes: "Framework and platform-specific packs (Next.js, Vercel, etc.)"
+
+  # Example namespaces (add more via PR):
+  #
+  # - namespace: "packs/yourorg/*"
+  #   owner: "yourorg"
+  #   notes: "Your organization's packs"
+  #
+  # - namespace: "packs/yourusername/*"
+  #   owner: "yourusername"
+  #   notes: "Personal packs by @yourusername"
