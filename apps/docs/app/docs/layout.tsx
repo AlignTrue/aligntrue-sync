@@ -174,12 +174,15 @@ export default async function DocsLayout({
       <BetaBanner />
       <Layout
         pageMap={pageMap}
+        docsRepositoryBase={themeConfig.docsRepositoryBase}
         navbar={
           <Navbar
             logo={themeConfig.logo}
             projectLink={themeConfig.project.link}
           />
         }
+        editLink={themeConfig.editLink.content}
+        feedback={themeConfig.feedback}
         search={<Search placeholder="Search documentation..." />}
         footer={<DocsFooter />}
         sidebar={{

@@ -9,7 +9,13 @@ const config = {
   },
   docsRepositoryBase:
     "https://github.com/AlignTrue/aligntrue-sync/tree/main/apps/docs",
-
+  editLink: {
+    content: "Edit this page",
+  },
+  feedback: {
+    content: "Question? Give us feedback",
+    labels: "feedback",
+  },
   // Table of contents configuration
   toc: {
     backToTop: true,
