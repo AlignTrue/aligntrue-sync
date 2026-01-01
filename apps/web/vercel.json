@@ -11,15 +11,15 @@
   "rewrites": [
     {
       "source": "/docs",
-      "destination": "https://docs.aligntrue.ai/docs"
+      "destination": "https://docs.sync.aligntrue.ai/docs"
     },
     {
       "source": "/docs/:path+",
-      "destination": "https://docs.aligntrue.ai/docs/:path+"
+      "destination": "https://docs.sync.aligntrue.ai/docs/:path+"
     },
     {
       "source": "/_pagefind/:path*",
-      "destination": "https://docs.aligntrue.ai/_pagefind/:path*"
+      "destination": "https://docs.sync.aligntrue.ai/_pagefind/:path*"
     }
   ],
   "redirects": [
