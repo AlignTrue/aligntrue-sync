@@ -2119,11 +2119,23 @@ If git operations fail after publishing:
 
 <Tabs items={["npm", "yarn", "Homebrew (macOS)", "Direct"]}>
 
-<Tabs.Tab>```bash npm install -g pnpm@10 ```</Tabs.Tab>
+<Tabs.Tab>
+  ```bash
+  npm install -g pnpm@10
+  ```
+</Tabs.Tab>
 
-<Tabs.Tab>```bash yarn global add pnpm@10 ```</Tabs.Tab>
+<Tabs.Tab>
+  ```bash
+  yarn global add pnpm@10
+  ```
+</Tabs.Tab>
 
-<Tabs.Tab>```bash brew install pnpm pnpm env use --global 10 ```</Tabs.Tab>
+<Tabs.Tab>
+  ```bash
+  brew install pnpm pnpm env use --global 10
+  ```
+</Tabs.Tab>
 
 <Tabs.Tab>
   Visit [pnpm.io](https://pnpm.io/installation) for platform-specific
