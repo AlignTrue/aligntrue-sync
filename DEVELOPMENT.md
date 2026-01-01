@@ -426,9 +426,9 @@ This ensures determinism matches CI exactly.
 
 ## Next steps
 
-- Review [workspace structure](https://aligntrue.ai/docs/06-development/workspace)
-- Explore [development commands](https://aligntrue.ai/docs/06-development/commands)
-- Learn [code standards](https://aligntrue.ai/docs/06-development/code-standards)
+- Review [workspace structure](https://sync.aligntrue.ai/docs/06-development/workspace)
+- Explore [development commands](https://sync.aligntrue.ai/docs/06-development/commands)
+- Learn [code standards](https://sync.aligntrue.ai/docs/06-development/code-standards)
 
 ---
 
@@ -647,8 +647,8 @@ This real example shows the process:
 
 ## Related documentation
 
-- [CI guide](https://aligntrue.ai/docs/06-development/ci)
-- [Development setup](https://aligntrue.ai/docs/06-development/setup)
+- [CI guide](https://sync.aligntrue.ai/docs/06-development/ci)
+- [Development setup](https://sync.aligntrue.ai/docs/06-development/setup)
 - [CHANGELOG](/CHANGELOG.md)
 
 ---
@@ -942,7 +942,7 @@ Cannot find module '@aligntrue/ui'
 
 **Fix:**
 
-See [Setup - Next.js dev server fails](https://aligntrue.ai/docs/06-development/setup#nextjs-dev-server-fails-with-cannot-find-module-errors) for detailed troubleshooting steps.
+See [Setup - Next.js dev server fails](https://sync.aligntrue.ai/docs/06-development/setup#nextjs-dev-server-fails-with-cannot-find-module-errors) for detailed troubleshooting steps.
 
 ### Pre-commit hook is slow
 
@@ -987,8 +987,8 @@ pnpm typecheck
 
 ## Next steps
 
-- Review [setup guide](https://aligntrue.ai/docs/06-development/setup)
-- Learn [test maintenance](https://aligntrue.ai/docs/06-development/test-maintenance) for handling test failures
+- Review [setup guide](https://sync.aligntrue.ai/docs/06-development/setup)
+- Learn [test maintenance](https://sync.aligntrue.ai/docs/06-development/test-maintenance) for handling test failures
 
 ---
 
@@ -1100,7 +1100,7 @@ import {
 // Create descriptive errors with actionable guidance
 throw new ConfigError(
   "Invalid config field: profile.id missing",
-  "Set profile.id in .aligntrue/config.yaml"
+  "Set profile.id in .aligntrue/config.yaml",
 ).withNextSteps(["Run: aligntrue init", "Edit: aligntrue config edit"]);
 
 // Prefer ErrorFactory helpers for common cases
@@ -1110,7 +1110,7 @@ throw ErrorFactory.configNotFound(configPath);
 throw new AlignTrueError(
   "Unexpected state while resolving plugs",
   "UNEXPECTED_STATE",
-  1
+  1,
 );
 ```
 
@@ -1158,7 +1158,7 @@ Create reusable test fixtures near complex logic:
 ```typescript
 // packages/core/tests/helpers/test-fixtures.ts
 export function createMockConfig(
-  overrides?: Partial<AlignTrueConfig>
+  overrides?: Partial<AlignTrueConfig>,
 ): AlignTrueConfig {
   return {
     version: "1.0.0",
@@ -1254,9 +1254,9 @@ pnpm validate:docs
 
 ## Related documentation
 
-- [CI guide](https://aligntrue.ai/docs/06-development/ci) for validation and debugging workflow
-- [Architecture](https://aligntrue.ai/docs/06-development/architecture) for design principles
-- [Test maintenance](https://aligntrue.ai/docs/06-development/test-maintenance) for test strategy
+- [CI guide](https://sync.aligntrue.ai/docs/06-development/ci) for validation and debugging workflow
+- [Architecture](https://sync.aligntrue.ai/docs/06-development/architecture) for design principles
+- [Test maintenance](https://sync.aligntrue.ai/docs/06-development/test-maintenance) for test strategy
 
 ---
 
@@ -1555,9 +1555,9 @@ Example: `feat: add new command` or `fix: resolve memory leak`
 
 ## Next steps
 
-- Review [workspace structure](https://aligntrue.ai/docs/06-development/workspace)
-- Understand [architecture concepts](https://aligntrue.ai/docs/06-development/architecture)
-- Learn [CI validation](https://aligntrue.ai/docs/06-development/ci) to prevent failures
+- Review [workspace structure](https://sync.aligntrue.ai/docs/06-development/workspace)
+- Understand [architecture concepts](https://sync.aligntrue.ai/docs/06-development/architecture)
+- Learn [CI validation](https://sync.aligntrue.ai/docs/06-development/ci) to prevent failures
 
 ---
 
@@ -1694,7 +1694,7 @@ To confirm majors and other risky updates stay manual:
 
 - [GitHub Dependabot docs](https://docs.github.com/en/code-security/dependabot)
 - [GitHub auto-merge API](https://docs.github.com/en/rest/pulls/merges?apiVersion=2022-11-28#enable-auto-merge-for-a-pull-request)
-- [CI guide](https://aligntrue.ai/docs/06-development/ci)
+- [CI guide](https://sync.aligntrue.ai/docs/06-development/ci)
 
 ---
 
@@ -2402,9 +2402,9 @@ base64 -b 0 private-key.pem  # macOS (use `base64 -w0` on Linux)
 
 ## Next steps
 
-- Learn about the [workspace structure](https://aligntrue.ai/docs/06-development/workspace)
-- Explore [development commands](https://aligntrue.ai/docs/06-development/commands)
-- Understand [CI validation and troubleshooting](https://aligntrue.ai/docs/06-development/ci)
+- Learn about the [workspace structure](https://sync.aligntrue.ai/docs/06-development/workspace)
+- Explore [development commands](https://sync.aligntrue.ai/docs/06-development/commands)
+- Understand [CI validation and troubleshooting](https://sync.aligntrue.ai/docs/06-development/ci)
 
 ---
 
@@ -2554,7 +2554,7 @@ The pre-push hook catches these failures before they hit `main`, but:
 
 ## Related documentation
 
-- [Development setup](https://aligntrue.ai/docs/06-development/setup)
+- [Development setup](https://sync.aligntrue.ai/docs/06-development/setup)
 
 ---
 
@@ -2562,7 +2562,7 @@ The pre-push hook catches these failures before they hit `main`, but:
 
 AlignTrue is a pnpm monorepo with apps and packages organized for clarity and maintainability.
 
-**See [Architecture](https://aligntrue.ai/docs/06-development/architecture#workspace-organization) for the full workspace tree and design principles.**
+**See [Architecture](https://sync.aligntrue.ai/docs/06-development/architecture#workspace-organization) for the full workspace tree and design principles.**
 
 ## Apps
 
@@ -2819,7 +2819,7 @@ Apps depend on multiple packages as needed.
 
 ## Working across packages
 
-See [development commands](https://aligntrue.ai/docs/06-development/commands) for package build workflows and watch mode.
+See [development commands](https://sync.aligntrue.ai/docs/06-development/commands) for package build workflows and watch mode.
 
 From the repo root you can target a package without changing directories:
 
@@ -2830,9 +2830,9 @@ pnpm --filter @aligntrue/cli build
 
 ## Next steps
 
-- Learn [development commands](https://aligntrue.ai/docs/06-development/commands)
-- Understand [architecture concepts](https://aligntrue.ai/docs/06-development/architecture)
-- Review [CI guide](https://aligntrue.ai/docs/06-development/ci) for validation workflows
+- Learn [development commands](https://sync.aligntrue.ai/docs/06-development/commands)
+- Understand [architecture concepts](https://sync.aligntrue.ai/docs/06-development/architecture)
+- Review [CI guide](https://sync.aligntrue.ai/docs/06-development/ci) for validation workflows
 
 ---
 

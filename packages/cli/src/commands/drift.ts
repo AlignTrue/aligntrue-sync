@@ -152,7 +152,7 @@ export async function drift(args: string[]): Promise<void> {
   // Must be in team mode
   if (config.mode !== "team") {
     console.error(
-      "Drift detection requires team mode. Run: aligntrue team enable"
+      "Drift detection requires team mode. Run: aligntrue team enable",
     );
     exitWithError(1, "Drift detection requires team mode");
   }
@@ -166,7 +166,7 @@ export async function drift(args: string[]): Promise<void> {
   const ignoreLockfileDrift = Boolean(parsedArgs.flags["post-sync"]);
   const driftResults = await detectDriftForConfig(
     configWithPaths,
-    ignoreLockfileDrift
+    ignoreLockfileDrift,
   );
 
   // Output results based on format
@@ -208,13 +208,13 @@ function outputHuman(results: DriftDetectionResult): void {
   const byCategory = results.drift.reduce(
     (
       acc: Record<string, DriftDetectionResult["drift"]>,
-      item: DriftDetectionResult["drift"][0]
+      item: DriftDetectionResult["drift"][0],
     ) => {
       if (!acc[item.category]) acc[item.category] = [];
       acc[item.category]!.push(item);
       return acc;
     },
-    {} as Record<string, DriftDetectionResult["drift"]>
+    {} as Record<string, DriftDetectionResult["drift"]>,
   );
 
   // Output each category
@@ -280,7 +280,7 @@ function outputJson(results: DriftDetectionResult): void {
  */
 function outputSarif(
   results: DriftDetectionResult,
-  gatesEnabled: boolean
+  gatesEnabled: boolean,
 ): void {
   const rules = results.drift.reduce(
     (
@@ -289,7 +289,7 @@ function outputSarif(
         shortDescription: { text: string };
         fullDescription: { text: string };
       }[],
-      item: DriftDetectionResult["drift"][0]
+      item: DriftDetectionResult["drift"][0],
     ) => {
       const ruleId = `aligntrue/${item.category}-drift`;
       if (!acc.find((r) => r.id === ruleId)) {
@@ -305,7 +305,7 @@ function outputSarif(
       }
       return acc;
     },
-    []
+    [],
   );
 
   const sarif = {
@@ -338,7 +338,7 @@ function outputSarif(
                 },
               },
             ],
-          })
+          }),
         ),
       },
     ],

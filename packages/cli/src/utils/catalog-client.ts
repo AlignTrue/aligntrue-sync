@@ -1,6 +1,6 @@
 import { setTimeout as delay } from "timers/promises";
 
-const CATALOG_API_BASE = "https://aligntrue.ai/api/aligns";
+const CATALOG_API_BASE = "https://sync.aligntrue.ai/api/aligns";
 const DEFAULT_TIMEOUT_MS = 30_000;
 
 export type CatalogKind = "pack" | "rule" | string;

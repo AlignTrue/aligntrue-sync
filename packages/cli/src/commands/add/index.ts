@@ -98,7 +98,7 @@ export async function add(args: string[]): Promise<void> {
       args: ARG_DEFINITIONS,
       examples: [
         "aligntrue add abc123defgh                         # Catalog pack or rule by ID",
-        "aligntrue add https://aligntrue.ai/a/abc123defgh  # Catalog pack or rule by URL",
+        "aligntrue add https://sync.aligntrue.ai/a/abc123defgh  # Catalog pack or rule by URL",
         "aligntrue add https://github.com/org/rules           # One-time copy",
         "aligntrue add link https://github.com/org/rules     # Add as link (updates on sync)",
         "aligntrue add link <url> --personal                 # Personal link",

@@ -464,7 +464,7 @@ async function teamEnable(
       "  aligntrue drift         Check for drift",
       "  aligntrue drift --gates CI enforcement (fails on drift)",
       "",
-      "Learn more: https://aligntrue.ai/team",
+      "Learn more: https://sync.aligntrue.ai/team",
     ];
 
     if (!nonInteractive) {
@@ -655,7 +655,7 @@ async function teamJoin(
 # This file is gitignored and contains your personal settings.
 #
 # Your team uses AlignTrue to sync AI rules. This file is for YOUR settings only.
-# Learn more: https://aligntrue.ai/docs/01-guides/03-join-team
+# Learn more: https://sync.aligntrue.ai/docs/01-guides/03-join-team
 #
 # Example personal settings:
 #   remotes:
@@ -688,7 +688,7 @@ version: "1"
           "Next steps:\n" +
           "  1. Run: aligntrue sync\n" +
           "  2. (Optional) Add personal settings to .aligntrue/config.yaml\n\n" +
-          "Learn more: https://aligntrue.ai/docs/01-guides/03-join-team",
+          "Learn more: https://sync.aligntrue.ai/docs/01-guides/03-join-team",
       );
     } else {
       console.log("✓ Created personal config: .aligntrue/config.yaml");

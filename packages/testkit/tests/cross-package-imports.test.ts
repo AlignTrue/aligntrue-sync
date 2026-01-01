@@ -165,9 +165,7 @@ describe("cross-package imports", () => {
     // Get packages directory relative to this test file
     const testDir = __dirname;
     const workspaceRoot = join(testDir, "../../..");
-    const packageRoots = [
-      join(workspaceRoot, "packages"),
-    ];
+    const packageRoots = [join(workspaceRoot, "packages")];
     const workspacePackages = discoverWorkspacePackages(packageRoots);
     const packageMap = new Map(
       workspacePackages.map((pkg) => [pkg.name, pkg.dir]),

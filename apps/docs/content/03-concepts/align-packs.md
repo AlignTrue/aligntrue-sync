@@ -16,7 +16,7 @@ Align packs are now catalog-native only. There is no `.align.yaml` authoring or 
 1. Go to the catalog bulk import page.
 2. Paste one or more rule URLs and import them.
 3. Click **Create pack**, fill in title/description/author, and save.
-4. Share the catalog link (e.g., `https://aligntrue.ai/a/<id>`).
+4. Share the catalog link (e.g., `https://sync.aligntrue.ai/a/<id>`).
 
 What is stored:
 
@@ -28,7 +28,7 @@ What is stored:
 
 - Open the catalog link to preview rules in all agent formats.
 - Download a zip that preserves relative paths.
-- (CLI) Install via `aligntrue add <pack-id>` or `aligntrue add https://aligntrue.ai/a/<pack-id>`.
+- (CLI) Install via `aligntrue add <pack-id>` or `aligntrue add https://sync.aligntrue.ai/a/<pack-id>`.
 
 ## Not supported
 

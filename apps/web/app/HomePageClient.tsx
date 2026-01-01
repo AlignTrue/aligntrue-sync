@@ -30,7 +30,7 @@ import type { AlignSummary } from "@/lib/aligns/transforms";
 
 async function fetchList(
   path: string,
-  init?: RequestInit
+  init?: RequestInit,
 ): Promise<AlignSummary[]> {
   const response = await fetch(path, init);
   if (!response.ok) return [];

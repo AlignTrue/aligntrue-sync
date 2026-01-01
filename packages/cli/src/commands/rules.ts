@@ -276,7 +276,7 @@ Description:
   frontmatter settings.
 
 Related:
-  See https://aligntrue.ai/docs/02-customization/per-rule-targeting
+  See https://sync.aligntrue.ai/docs/02-customization/per-rule-targeting
   for documentation on targeting rules to specific agents.
 `);
 }

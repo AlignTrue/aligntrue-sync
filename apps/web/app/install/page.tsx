@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    url: "https://aligntrue.ai/install",
+    url: "https://sync.aligntrue.ai/install",
     images: [
       {
         url: "/aligntrue-og-image.png",

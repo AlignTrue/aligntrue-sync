@@ -11,7 +11,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { fetchPackContent } from "@/lib/aligns/pack-content";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://aligntrue.ai";
+const BASE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://sync.aligntrue.ai";
 const FAILURE_THRESHOLD = 3;
 
 export const dynamic = "force-dynamic";

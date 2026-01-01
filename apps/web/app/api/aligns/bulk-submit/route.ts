@@ -107,7 +107,7 @@ export async function POST(req: Request) {
     }
 
     const hashInput = `${title}:${successIds.map((s) => s.id).join("|")}`;
-    const syntheticUrl = `https://aligntrue.ai/catalog/${hashString(hashInput)}`;
+    const syntheticUrl = `https://sync.aligntrue.ai/catalog/${hashString(hashInput)}`;
     const id = alignIdFromNormalizedUrl(syntheticUrl);
     const now = new Date().toISOString();
     const existing: AlignRecord | null = await store.get(id);

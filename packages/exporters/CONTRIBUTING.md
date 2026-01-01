@@ -93,7 +93,7 @@ export class MyExporterExporter implements ExporterPlugin {
 
   async export(
     request: ScopedExportRequest,
-    options: ExportOptions
+    options: ExportOptions,
   ): Promise<ExportResult> {
     const { scope, rules, outputPath } = request;
     const { outputDir, dryRun, backup } = options;

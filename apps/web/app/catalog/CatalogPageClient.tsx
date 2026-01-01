@@ -164,7 +164,7 @@ export function CatalogPageClient() {
 
   const totalPages = useMemo(
     () => Math.max(1, Math.ceil(total / pageSize)),
-    [total, pageSize]
+    [total, pageSize],
   );
 
   const startIndex = total === 0 ? 0 : page * pageSize + 1;

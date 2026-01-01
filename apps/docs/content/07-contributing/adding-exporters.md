@@ -88,7 +88,7 @@ export class MyAgentExporter extends ExporterBase {
 
   async export(
     request: ScopedExportRequest,
-    options: ExportOptions
+    options: ExportOptions,
   ): Promise<ExportResult> {
     const { outputDir, dryRun = false } = options;
     const sections = request.align.sections ?? [];
@@ -103,7 +103,7 @@ export class MyAgentExporter extends ExporterBase {
       outputPath,
       content,
       dryRun,
-      options
+      options,
     );
 
     // Surface any partial fidelity (e.g., unsupported metadata)
@@ -156,7 +156,7 @@ describe("MyAgentExporter", () => {
   beforeEach(() => {
     outputDir = join(
       tmpdir(),
-      `my-agent-${Math.random().toString(16).slice(2)}`
+      `my-agent-${Math.random().toString(16).slice(2)}`,
     );
   });
 
@@ -179,12 +179,12 @@ describe("MyAgentExporter", () => {
         },
         outputPath,
       },
-      { outputDir, dryRun: false }
+      { outputDir, dryRun: false },
     );
 
     expect(result.filesWritten).toEqual([join(outputDir, outputPath)]);
     expect(readFileSync(join(outputDir, outputPath), "utf-8")).toContain(
-      "Test rule"
+      "Test rule",
     );
   });
 
@@ -199,7 +199,7 @@ describe("MyAgentExporter", () => {
         },
         outputPath,
       },
-      { outputDir, dryRun: true }
+      { outputDir, dryRun: true },
     );
 
     expect(result.filesWritten).toEqual([]);
@@ -222,7 +222,7 @@ describe("MyAgentExporter", () => {
         },
         outputPath,
       },
-      { outputDir, dryRun: true }
+      { outputDir, dryRun: true },
     );
 
     expect(result.fidelityNotes).toBeDefined();

@@ -1,6 +1,7 @@
 import { getAllDocRoutes } from "../../lib/docs-routes";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://aligntrue.ai";
+const BASE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://sync.aligntrue.ai";
 
 interface Entry {
   url: string;

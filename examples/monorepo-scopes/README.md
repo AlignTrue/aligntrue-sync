@@ -253,6 +253,6 @@ This checks:
 
 ## See also
 
-- [Scopes guide](https://aligntrue.ai/docs/02-customization/scopes) - Complete scopes documentation
+- [Scopes guide](https://sync.aligntrue.ai/docs/02-customization/scopes) - Complete scopes documentation
 - [STRUCTURE.md](./STRUCTURE.md) - Architecture explanation
 - [Golden repo example](../golden-repo/) - Basic example to start with

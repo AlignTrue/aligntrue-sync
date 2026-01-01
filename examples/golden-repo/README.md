@@ -190,6 +190,6 @@ This checks:
 
 ## Learn more
 
-- [AlignTrue documentation](https://aligntrue.ai/docs)
-- [CLI reference](https://aligntrue.ai/docs/04-reference/cli-reference)
-- [Sync behavior](https://aligntrue.ai/docs/03-concepts/sync-behavior)
+- [AlignTrue documentation](https://sync.aligntrue.ai/docs)
+- [CLI reference](https://sync.aligntrue.ai/docs/04-reference/cli-reference)
+- [Sync behavior](https://sync.aligntrue.ai/docs/03-concepts/sync-behavior)

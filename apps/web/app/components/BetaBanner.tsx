@@ -26,7 +26,7 @@ export function BetaBanner() {
     if (mounted) {
       document.documentElement.style.setProperty(
         "--banner-height",
-        dismissed ? "0px" : "48px"
+        dismissed ? "0px" : "48px",
       );
     }
   }, [mounted, dismissed]);

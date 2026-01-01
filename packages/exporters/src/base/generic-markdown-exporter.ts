@@ -243,7 +243,7 @@ export class GenericMarkdownExporter extends ExporterBase {
     lines.push("AI agents should follow these linked guidelines.");
     lines.push("");
     lines.push(
-      "How to switch from links to inline rules: https://aligntrue.ai/export-content-mode",
+      "How to switch from links to inline rules: https://sync.aligntrue.ai/export-content-mode",
     );
     lines.push("");
 

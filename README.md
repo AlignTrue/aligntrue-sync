@@ -38,9 +38,9 @@ Auto-detects agents, imports existing rules, or creates AGENTS.md. Generates and
 > `aligntrue init https://github.com/org/rules`
 >
 > Supports GitHub, GitLab, SSH URLs, version tags, and local paths.
-> [See all source options →](https://aligntrue.ai/docs/01-guides/04-external-sources)
+> [See all source options →](https://sync.aligntrue.ai/docs/01-guides/04-external-sources)
 
-→ [Verify it works](https://aligntrue.ai/docs/00-getting-started/00-quickstart#verify-it-works) | [Solo guide](https://aligntrue.ai/docs/01-guides/01-solo-developer-guide)
+→ [Verify it works](https://sync.aligntrue.ai/docs/00-getting-started/00-quickstart#verify-it-works) | [Solo guide](https://sync.aligntrue.ai/docs/01-guides/01-solo-developer-guide)
 
 ## Common workflows
 
@@ -58,7 +58,7 @@ aligntrue init --source https://github.com/your/rules
 aligntrue sync
 ```
 
-Import rules from GitHub. Use `aligntrue add link <url>` to keep a connected source for ongoing updates; use `aligntrue add <url>` for a one-time import. [More examples →](https://aligntrue.ai/docs/01-guides/04-external-sources#managing-sources)
+Import rules from GitHub. Use `aligntrue add link <url>` to keep a connected source for ongoing updates; use `aligntrue add <url>` for a one-time import. [More examples →](https://sync.aligntrue.ai/docs/01-guides/04-external-sources#managing-sources)
 
 **Team mode (opt-in):**
 
@@ -72,7 +72,7 @@ aligntrue check        # Validate in CI
 - Edit rules in `.aligntrue/rules/` → sync to all agents
 - All agent files are read-only exports
 
-See [guides](https://aligntrue.ai/docs/01-guides/01-solo-developer-guide) for details.
+See [guides](https://sync.aligntrue.ai/docs/01-guides/01-solo-developer-guide) for details.
 
 **Optional verification:**
 
@@ -88,54 +88,54 @@ aligntrue migrate ruler        # Convert Ruler config to AlignTrue
 aligntrue sync                 # Sync to all agents
 ```
 
-See [migrate command](https://aligntrue.ai/docs/04-reference/cli-reference/core#aligntrue-migrate) for details.
+See [migrate command](https://sync.aligntrue.ai/docs/04-reference/cli-reference/core#aligntrue-migrate) for details.
 
 ## Why AlignTrue
 
 - **Auto-detects and imports** - Finds common agents automatically and imports existing rules from Cursor, AGENTS.md, Claude, and more
 - **60-second setup with zero config** - Run `aligntrue init` and AlignTrue handles agent detection and rule import
 - **Single source of truth** - Edit rules in `.aligntrue/rules/`; changes sync to all agents automatically
-- **Preview + safety** - `--dry-run` previews changes; backups, validation, and deterministic exports keep outputs consistent (see [Features](https://aligntrue.ai/docs/04-reference/features) for details)
+- **Preview + safety** - `--dry-run` previews changes; backups, validation, and deterministic exports keep outputs consistent (see [Features](https://sync.aligntrue.ai/docs/04-reference/features) for details)
 
 ## Features
 
 ### Complete feature matrix
 
-| Feature                    | Description                                                                         | Learn more                                                                                                                                                                                    |
-| -------------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Core Sync**              |                                                                                     |                                                                                                                                                                                               |
-| Centralized editing        | Edit your configured edit source file; AlignTrue keeps everything aligned           | [Sync Behavior](https://aligntrue.ai/docs/03-concepts/sync-behavior)                                                                                                                          |
-| Dry-run mode               | Preview changes before applying with `--dry-run`                                    | [Basic Commands](https://aligntrue.ai/docs/04-reference/cli-reference/core)                                                                                                                   |
-| Multi-layer safety         | Mandatory workspace backups, individual file backup, and section-level preservation | [Backup & Restore](https://aligntrue.ai/docs/04-reference/backup-restore)                                                                                                                     |
-| Atomic operations          | Safe file writes prevent corruption during syncs                                    | [Features](https://aligntrue.ai/docs/04-reference/features)                                                                                                                                   |
-| **Agent Support**          |                                                                                     |                                                                                                                                                                                               |
-| Auto-detection             | Finds Cursor, Copilot, Claude, VS Code, and other popular agents automatically      | [How it works](#how-it-works)                                                                                                                                                                 |
-| Broad coverage             | Native exporters for many AI coding agents                                          | [Agent Support](https://aligntrue.ai/docs/04-reference/agent-support)                                                                                                                         |
-| Unidirectional sync        | Edit in `.aligntrue/rules/`, sync to all agents automatically                       | [Getting Started](https://aligntrue.ai/docs/00-getting-started/00-quickstart)                                                                                                                 |
-| Multi-format support       | Agent-optimized formats (.mdc, AGENTS.md, MCP configs, multi-file exports)          | [Agent Support](https://aligntrue.ai/docs/04-reference/agent-support)                                                                                                                         |
-| Per-exporter config        | Control ignore file generation and format options per agent                         | [Export Formats](https://aligntrue.ai/docs/02-customization/export-formats)                                                                                                                   |
-| .alignignore protection    | Protect files from modifications using gitignore-style patterns                     | [Features](https://aligntrue.ai/docs/04-reference/features)                                                                                                                                   |
-| **Team Collaboration**     |                                                                                     |                                                                                                                                                                                               |
-| Lockfiles                  | Pin rule versions with `.aligntrue/lock.json` for reproducible builds               | [Team Mode](https://aligntrue.ai/docs/03-concepts/team-mode)                                                                                                                                  |
-| Drift detection            | Compare lockfile vs allowed sources with multiple output formats                    | [Drift Detection](https://aligntrue.ai/docs/03-concepts/drift-detection)                                                                                                                      |
-| CI validation              | Built-in commands for CI/CD pipelines with `aligntrue check` and `aligntrue drift`  | [CI/CD Integration](#integration-examples)                                                                                                                                                    |
-| **Customization**          |                                                                                     |                                                                                                                                                                                               |
-| Plugs                      | Dynamic value slots with validation for flexible rules                              | [Customization](https://aligntrue.ai/docs/02-customization)                                                                                                                                   |
-| Overlays                   | Surgical modifications to Aligns for safe fork-resistant customization              | [Customization](https://aligntrue.ai/docs/02-customization)                                                                                                                                   |
-| Scopes                     | Hierarchical rules for monorepos and complex projects                               | [Scopes](https://aligntrue.ai/docs/02-customization/scopes)                                                                                                                                   |
-| Export format options      | Choose native multi-file or AGENTS.md format per agent                              | [Export Formats](https://aligntrue.ai/docs/02-customization/export-formats)                                                                                                                   |
-| Per-rule targeting         | Control which agents receive specific rules via frontmatter                         | [Per-Rule Targeting](https://aligntrue.ai/docs/02-customization/per-rule-targeting)                                                                                                           |
-| **Developer Experience**   |                                                                                     |                                                                                                                                                                                               |
-| .gitignore automation      | Smart management of generated files                                                 | [Git Workflows](https://aligntrue.ai/docs/03-concepts/git-workflows)                                                                                                                          |
-| Verbose output             | Detailed execution logs with `--verbose` flag                                       | [CLI Reference](https://aligntrue.ai/docs/04-reference/cli-reference)                                                                                                                         |
-| Ruler migration            | Auto-detect and convert from Ruler                                                  | [Features](https://aligntrue.ai/docs/04-reference/features)                                                                                                                                   |
-| Backup & restore           | Selective file restoration with diff preview via `aligntrue revert`                 | [Backup & Restore](https://aligntrue.ai/docs/04-reference/backup-restore)                                                                                                                     |
-| **Structure Preservation** |                                                                                     |                                                                                                                                                                                               |
-| Import structure           | Recursive scanning preserves filenames and directory organization during import     | [Working with external sources](https://aligntrue.ai/docs/01-guides/04-external-sources)                                                                                                      |
-| Export structure           | Multi-file exporters mirror `.aligntrue/rules/` subdirectory structure              | [Solo guide](https://aligntrue.ai/docs/01-guides/01-solo-developer-guide#organizing-your-rules) or [Team guide](https://aligntrue.ai/docs/01-guides/02-team-guide#organizing-rules-for-teams) |
-| **Safety & Reliability**   |                                                                                     |                                                                                                                                                                                               |
-| Built-in safety            | Mandatory backups with quick rollback via `aligntrue revert`                        | [Backup & Restore](https://aligntrue.ai/docs/04-reference/backup-restore)                                                                                                                     |
-| Deterministic exports      | Schema validation and reproducible hashing keep outputs stable                      | [Features](https://aligntrue.ai/docs/04-reference/features)                                                                                                                                   |
+| Feature                    | Description                                                                         | Learn more                                                                                                                                                                                              |
+| -------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Core Sync**              |                                                                                     |                                                                                                                                                                                                         |
+| Centralized editing        | Edit your configured edit source file; AlignTrue keeps everything aligned           | [Sync Behavior](https://sync.aligntrue.ai/docs/03-concepts/sync-behavior)                                                                                                                               |
+| Dry-run mode               | Preview changes before applying with `--dry-run`                                    | [Basic Commands](https://sync.aligntrue.ai/docs/04-reference/cli-reference/core)                                                                                                                        |
+| Multi-layer safety         | Mandatory workspace backups, individual file backup, and section-level preservation | [Backup & Restore](https://sync.aligntrue.ai/docs/04-reference/backup-restore)                                                                                                                          |
+| Atomic operations          | Safe file writes prevent corruption during syncs                                    | [Features](https://sync.aligntrue.ai/docs/04-reference/features)                                                                                                                                        |
+| **Agent Support**          |                                                                                     |                                                                                                                                                                                                         |
+| Auto-detection             | Finds Cursor, Copilot, Claude, VS Code, and other popular agents automatically      | [How it works](#how-it-works)                                                                                                                                                                           |
+| Broad coverage             | Native exporters for many AI coding agents                                          | [Agent Support](https://sync.aligntrue.ai/docs/04-reference/agent-support)                                                                                                                              |
+| Unidirectional sync        | Edit in `.aligntrue/rules/`, sync to all agents automatically                       | [Getting Started](https://sync.aligntrue.ai/docs/00-getting-started/00-quickstart)                                                                                                                      |
+| Multi-format support       | Agent-optimized formats (.mdc, AGENTS.md, MCP configs, multi-file exports)          | [Agent Support](https://sync.aligntrue.ai/docs/04-reference/agent-support)                                                                                                                              |
+| Per-exporter config        | Control ignore file generation and format options per agent                         | [Export Formats](https://sync.aligntrue.ai/docs/02-customization/export-formats)                                                                                                                        |
+| .alignignore protection    | Protect files from modifications using gitignore-style patterns                     | [Features](https://sync.aligntrue.ai/docs/04-reference/features)                                                                                                                                        |
+| **Team Collaboration**     |                                                                                     |                                                                                                                                                                                                         |
+| Lockfiles                  | Pin rule versions with `.aligntrue/lock.json` for reproducible builds               | [Team Mode](https://sync.aligntrue.ai/docs/03-concepts/team-mode)                                                                                                                                       |
+| Drift detection            | Compare lockfile vs allowed sources with multiple output formats                    | [Drift Detection](https://sync.aligntrue.ai/docs/03-concepts/drift-detection)                                                                                                                           |
+| CI validation              | Built-in commands for CI/CD pipelines with `aligntrue check` and `aligntrue drift`  | [CI/CD Integration](#integration-examples)                                                                                                                                                              |
+| **Customization**          |                                                                                     |                                                                                                                                                                                                         |
+| Plugs                      | Dynamic value slots with validation for flexible rules                              | [Customization](https://sync.aligntrue.ai/docs/02-customization)                                                                                                                                        |
+| Overlays                   | Surgical modifications to Aligns for safe fork-resistant customization              | [Customization](https://sync.aligntrue.ai/docs/02-customization)                                                                                                                                        |
+| Scopes                     | Hierarchical rules for monorepos and complex projects                               | [Scopes](https://sync.aligntrue.ai/docs/02-customization/scopes)                                                                                                                                        |
+| Export format options      | Choose native multi-file or AGENTS.md format per agent                              | [Export Formats](https://sync.aligntrue.ai/docs/02-customization/export-formats)                                                                                                                        |
+| Per-rule targeting         | Control which agents receive specific rules via frontmatter                         | [Per-Rule Targeting](https://sync.aligntrue.ai/docs/02-customization/per-rule-targeting)                                                                                                                |
+| **Developer Experience**   |                                                                                     |                                                                                                                                                                                                         |
+| .gitignore automation      | Smart management of generated files                                                 | [Git Workflows](https://sync.aligntrue.ai/docs/03-concepts/git-workflows)                                                                                                                               |
+| Verbose output             | Detailed execution logs with `--verbose` flag                                       | [CLI Reference](https://sync.aligntrue.ai/docs/04-reference/cli-reference)                                                                                                                              |
+| Ruler migration            | Auto-detect and convert from Ruler                                                  | [Features](https://sync.aligntrue.ai/docs/04-reference/features)                                                                                                                                        |
+| Backup & restore           | Selective file restoration with diff preview via `aligntrue revert`                 | [Backup & Restore](https://sync.aligntrue.ai/docs/04-reference/backup-restore)                                                                                                                          |
+| **Structure Preservation** |                                                                                     |                                                                                                                                                                                                         |
+| Import structure           | Recursive scanning preserves filenames and directory organization during import     | [Working with external sources](https://sync.aligntrue.ai/docs/01-guides/04-external-sources)                                                                                                           |
+| Export structure           | Multi-file exporters mirror `.aligntrue/rules/` subdirectory structure              | [Solo guide](https://sync.aligntrue.ai/docs/01-guides/01-solo-developer-guide#organizing-your-rules) or [Team guide](https://sync.aligntrue.ai/docs/01-guides/02-team-guide#organizing-rules-for-teams) |
+| **Safety & Reliability**   |                                                                                     |                                                                                                                                                                                                         |
+| Built-in safety            | Mandatory backups with quick rollback via `aligntrue revert`                        | [Backup & Restore](https://sync.aligntrue.ai/docs/04-reference/backup-restore)                                                                                                                          |
+| Deterministic exports      | Schema validation and reproducible hashing keep outputs stable                      | [Features](https://sync.aligntrue.ai/docs/04-reference/features)                                                                                                                                        |
 
 ## Broad agent support
 
@@ -151,7 +151,7 @@ AlignTrue supports a wide range of AI coding agents with native exporters.
 - VS Code MCP agents
 - Amazon Q, Firebase Studio, OpenHands, Zed, and more
 
-[View the full compatibility matrix →](https://aligntrue.ai/docs/04-reference/agent-support)
+[View the full compatibility matrix →](https://sync.aligntrue.ai/docs/04-reference/agent-support)
 
 ## How it works
 
@@ -196,46 +196,46 @@ jobs:
       - run: aligntrue drift --gates
 ```
 
-[View solo developer guide →](https://aligntrue.ai/docs/01-guides/01-solo-developer-guide)
+[View solo developer guide →](https://sync.aligntrue.ai/docs/01-guides/01-solo-developer-guide)
 
 ## Key concepts
 
-- [Quickstart](https://aligntrue.ai/docs/00-getting-started/00-quickstart) - Get AlignTrue running in 60 seconds
-- [Glossary](https://aligntrue.ai/docs/03-concepts/glossary) - AlignTrue terminology and key concepts explained
-- [Customization](https://aligntrue.ai/docs/02-customization) - Plugs, overlays, and scopes for fork-safe customization
-- [Team Mode](https://aligntrue.ai/docs/03-concepts/team-mode) - Collaboration features for teams
-- [Sync Behavior](https://aligntrue.ai/docs/03-concepts/sync-behavior) - How centralized rule management works
-- [Drift Detection](https://aligntrue.ai/docs/03-concepts/drift-detection) - Track alignment changes over time
-- [Git Workflows](https://aligntrue.ai/docs/03-concepts/git-workflows) - Pull and share rules via git
-- [Examples](https://aligntrue.ai/docs/04-reference/examples) - Browse 11 curated rule Aligns
+- [Quickstart](https://sync.aligntrue.ai/docs/00-getting-started/00-quickstart) - Get AlignTrue running in 60 seconds
+- [Glossary](https://sync.aligntrue.ai/docs/03-concepts/glossary) - AlignTrue terminology and key concepts explained
+- [Customization](https://sync.aligntrue.ai/docs/02-customization) - Plugs, overlays, and scopes for fork-safe customization
+- [Team Mode](https://sync.aligntrue.ai/docs/03-concepts/team-mode) - Collaboration features for teams
+- [Sync Behavior](https://sync.aligntrue.ai/docs/03-concepts/sync-behavior) - How centralized rule management works
+- [Drift Detection](https://sync.aligntrue.ai/docs/03-concepts/drift-detection) - Track alignment changes over time
+- [Git Workflows](https://sync.aligntrue.ai/docs/03-concepts/git-workflows) - Pull and share rules via git
+- [Examples](https://sync.aligntrue.ai/docs/04-reference/examples) - Browse 11 curated rule Aligns
 
 ## Reference
 
-- [CLI Commands](https://aligntrue.ai/docs/04-reference/cli-reference) - Complete command reference
-- [Concepts](https://aligntrue.ai/docs/03-concepts/glossary) - Understand AlignTrue terminology
-- [Troubleshooting](https://aligntrue.ai/docs/05-troubleshooting) - Common issues and solutions
+- [CLI Commands](https://sync.aligntrue.ai/docs/04-reference/cli-reference) - Complete command reference
+- [Concepts](https://sync.aligntrue.ai/docs/03-concepts/glossary) - Understand AlignTrue terminology
+- [Troubleshooting](https://sync.aligntrue.ai/docs/05-troubleshooting) - Common issues and solutions
 
 ## Contributing
 
 Want to contribute? Check out the guides:
 
-- [Getting Started](https://aligntrue.ai/docs/07-contributing/getting-started) - Set up your development environment
-- [Creating Aligns](https://aligntrue.ai/docs/07-contributing/creating-aligns) - Author and publish rule Aligns
-- [Adding Exporters](https://aligntrue.ai/docs/07-contributing/adding-exporters) - Add support for new agents
+- [Getting Started](https://sync.aligntrue.ai/docs/07-contributing/getting-started) - Set up your development environment
+- [Creating Aligns](https://sync.aligntrue.ai/docs/07-contributing/creating-aligns) - Author and publish rule Aligns
+- [Adding Exporters](https://sync.aligntrue.ai/docs/07-contributing/adding-exporters) - Add support for new agents
 
 ## Development
 
 Setting up AlignTrue for local development:
 
-- [Setup](https://aligntrue.ai/docs/06-development/setup) - Prerequisites and installation
-- [Workspace](https://aligntrue.ai/docs/06-development/workspace) - Monorepo structure and packages
-- [Commands](https://aligntrue.ai/docs/06-development/commands) - Development commands and scripts
-- [Architecture](https://aligntrue.ai/docs/06-development/architecture) - Key architectural concepts
+- [Setup](https://sync.aligntrue.ai/docs/06-development/setup) - Prerequisites and installation
+- [Workspace](https://sync.aligntrue.ai/docs/06-development/workspace) - Monorepo structure and packages
+- [Commands](https://sync.aligntrue.ai/docs/06-development/commands) - Development commands and scripts
+- [Architecture](https://sync.aligntrue.ai/docs/06-development/architecture) - Key architectural concepts
 
 ## Learn more
 
 - [GitHub repository](https://github.com/AlignTrue/aligntrue-sync-sync)
-- [Examples](https://aligntrue.ai/docs/04-reference/examples) - Browse 11 curated rule Aligns
+- [Examples](https://sync.aligntrue.ai/docs/04-reference/examples) - Browse 11 curated rule Aligns
 - [Security policy](https://github.com/AlignTrue/aligntrue-sync-sync/blob/main/SECURITY.md)
 
 ## Support

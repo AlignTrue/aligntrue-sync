@@ -61,7 +61,7 @@ export function buildCatalogPackRecord({
   now,
   existing,
 }: BuildCatalogPackRecordParams): AlignRecord {
-  const normalizedUrl = `https://aligntrue.ai/a/${id}`;
+  const normalizedUrl = `https://sync.aligntrue.ai/a/${id}`;
   return {
     id,
     url: normalizedUrl,

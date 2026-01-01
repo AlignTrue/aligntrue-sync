@@ -578,7 +578,7 @@ export async function init(args: string[] = []): Promise<void> {
 
     // Show tips before the prompt
     clack.log.info(
-      `Select formats to start with${moreCount > 0 ? ` (add ${moreCount}+ more with 'aligntrue exporters')` : ""}\n  • Use space to select formats\n  • See full list: https://aligntrue.ai/agents\n  • See how to add new ones: https://aligntrue.ai/extend`,
+      `Select formats to start with${moreCount > 0 ? ` (add ${moreCount}+ more with 'aligntrue exporters')` : ""}\n  • Use space to select formats\n  • See full list: https://sync.aligntrue.ai/agents\n  • See how to add new ones: https://sync.aligntrue.ai/extend`,
     );
 
     const selected = await clack.multiselect({
@@ -839,7 +839,7 @@ privacy-consent.json
       : []),
     "  aligntrue --help      See all commands",
     "",
-    "Learn more: https://aligntrue.ai/docs",
+    "Learn more: https://sync.aligntrue.ai/docs",
   ];
 
   if (!nonInteractive) {

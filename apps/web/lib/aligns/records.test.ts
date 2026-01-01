@@ -98,8 +98,8 @@ describe("buildCatalogPackRecord", () => {
     const now = new Date().toISOString();
     const existing: AlignRecord = {
       id: "pack-1",
-      url: "https://aligntrue.ai/a/pack-1",
-      normalizedUrl: "https://aligntrue.ai/a/pack-1",
+      url: "https://sync.aligntrue.ai/a/pack-1",
+      normalizedUrl: "https://sync.aligntrue.ai/a/pack-1",
       provider: "unknown",
       source: "catalog",
       kind: "pack",

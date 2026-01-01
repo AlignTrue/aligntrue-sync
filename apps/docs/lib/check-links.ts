@@ -7,7 +7,7 @@ import { fileURLToPath } from "url";
  *
  * Validates:
  * - /docs/... links in docs content
- * - https://aligntrue.ai/... links in docs + CLI source files
+ * - https://sync.aligntrue.ai/... links in docs + CLI source files
  * - Short links that map to redirects defined in apps/docs/vercel.json
  */
 

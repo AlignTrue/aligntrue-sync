@@ -103,9 +103,9 @@ Security advisories must include:
 
 ## Related documentation
 
-- [Development Setup](https://aligntrue.ai/docs/06-development/setup)
-- [Architecture](https://aligntrue.ai/docs/06-development/architecture)
-- [CI guide](https://aligntrue.ai/docs/06-development/ci)
+- [Development Setup](https://sync.aligntrue.ai/docs/06-development/setup)
+- [Architecture](https://sync.aligntrue.ai/docs/06-development/architecture)
+- [CI guide](https://sync.aligntrue.ai/docs/06-development/ci)
 
 ---
 

@@ -28,7 +28,8 @@ describe("sitemap.xml", () => {
     const locs = urls.map((u: { loc: string }) => u.loc);
 
     // Should have docs homepage
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://aligntrue.ai";
+    const baseUrl =
+      process.env.NEXT_PUBLIC_SITE_URL || "https://sync.aligntrue.ai";
     const docsBaseUrl = `${baseUrl}/docs`;
 
     expect(locs).toContain(docsBaseUrl);
@@ -117,7 +118,8 @@ describe("robots.txt", () => {
     expect(text).toContain("Allow: /");
 
     // Should reference sitemap.xml
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://aligntrue.ai";
+    const baseUrl =
+      process.env.NEXT_PUBLIC_SITE_URL || "https://sync.aligntrue.ai";
     expect(text).toContain(`Sitemap: ${baseUrl}/sitemap.xml`);
 
     // Verify Content-Type header

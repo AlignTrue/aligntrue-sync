@@ -109,7 +109,7 @@ function buildSeeds(): SeedEntry[] {
     const viewCount = (i * 11) % 300;
 
     if (isPack) {
-      const catalogUrl = `https://aligntrue.ai/a/${id}`;
+      const catalogUrl = `https://sync.aligntrue.ai/a/${id}`;
       const packContent = makePackFiles(title, topic, stack);
       const totalBytes = packContent.files.reduce(
         (sum, file) => sum + (file.size ?? 0),

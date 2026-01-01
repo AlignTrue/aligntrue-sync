@@ -27,7 +27,7 @@ Set these in Vercel Dashboard → Settings → Environment Variables:
 #### Production
 
 ```
-NEXT_PUBLIC_SITE_URL=https://aligntrue.ai
+NEXT_PUBLIC_SITE_URL=https://sync.aligntrue.ai
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX  # Optional, for Google Analytics
 ```
 
@@ -88,23 +88,23 @@ curl http://localhost:3000/robots.txt
 
 ```bash
 # 1. Docs domain responds
-curl -I https://docs.aligntrue.ai
+curl -I https://docs.sync.aligntrue.ai
 
 # 2. Docs section loads
-curl -I https://docs.aligntrue.ai/docs
+curl -I https://docs.sync.aligntrue.ai/docs
 
 # 3. Sitemap is accessible and includes docs
-curl https://docs.aligntrue.ai/sitemap.xml | grep -E "<loc>|</loc>" | head -20
+curl https://docs.sync.aligntrue.ai/sitemap.xml | grep -E "<loc>|</loc>" | head -20
 
 # 4. Robots.txt points to sitemap
-curl https://docs.aligntrue.ai/robots.txt
+curl https://docs.sync.aligntrue.ai/robots.txt
 
 # 5. Security headers are present
-curl -I https://docs.aligntrue.ai | grep -E "X-Frame-Options|X-Content-Type-Options|Strict-Transport-Security"
+curl -I https://docs.sync.aligntrue.ai | grep -E "X-Frame-Options|X-Content-Type-Options|Strict-Transport-Security"
 
 # 6. Assets are accessible
-curl -I https://docs.aligntrue.ai/aligntrue-og-image.png
-curl -I https://docs.aligntrue.ai/favicon.ico
+curl -I https://docs.sync.aligntrue.ai/aligntrue-og-image.png
+curl -I https://docs.sync.aligntrue.ai/favicon.ico
 ```
 
 ## Security Headers

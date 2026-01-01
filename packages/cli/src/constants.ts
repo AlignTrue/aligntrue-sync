@@ -5,7 +5,7 @@
  * Used in CLI output, templates, and user-facing messages.
  */
 
-export const DOCS_BASE_URL = "https://aligntrue.ai";
+export const DOCS_BASE_URL = "https://sync.aligntrue.ai";
 export const DOCS_QUICKSTART = `${DOCS_BASE_URL}/quickstart`;
 export const DOCS_SCOPES = `${DOCS_BASE_URL}/scopes`;
 export const DOCS_EXPORTERS = `${DOCS_BASE_URL}/exporters`;

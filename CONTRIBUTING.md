@@ -19,21 +19,21 @@ AlignTrue has many ways to get involved:
 
 Create and maintain rule sets (Aligns) that help others align their AI agents.
 
-**[Create Aligns](https://aligntrue.ai/docs/07-contributing/creating-aligns)** — Write rules that solve real problems for your domain or stack.
+**[Create Aligns](https://sync.aligntrue.ai/docs/07-contributing/creating-aligns)** — Write rules that solve real problems for your domain or stack.
 
-**[Edit documentation](https://aligntrue.ai/docs/07-contributing/editing-docs)** — Improve docs on the site or contribute to our docs-first architecture.
+**[Edit documentation](https://sync.aligntrue.ai/docs/07-contributing/editing-docs)** — Improve docs on the site or contribute to our docs-first architecture.
 
 ### Code contributions
 
 Extend AlignTrue's core platform and integrations.
 
-**[Add exporters](https://aligntrue.ai/docs/07-contributing/adding-exporters)** — Support new AI agents and platforms.
+**[Add exporters](https://sync.aligntrue.ai/docs/07-contributing/adding-exporters)** — Support new AI agents and platforms.
 
-**[Development setup](https://aligntrue.ai/docs/06-development/setup)** — Local environment, build, and test workflow.
+**[Development setup](https://sync.aligntrue.ai/docs/06-development/setup)** — Local environment, build, and test workflow.
 
 ## Getting started
 
-1. **New to contributing?** Start with [How to contribute](https://aligntrue.ai/docs/07-contributing/getting-started).
+1. **New to contributing?** Start with [How to contribute](https://sync.aligntrue.ai/docs/07-contributing/getting-started).
 2. **Unsure what to work on?** Check [GitHub Issues](https://github.com/AlignTrue/aligntrue-sync/issues) for `good-first-issue` labels.
 3. **Want to discuss first?** Join [GitHub Discussions](https://github.com/AlignTrue/aligntrue-sync/discussions).
 
@@ -42,14 +42,14 @@ Extend AlignTrue's core platform and integrations.
 ### Before you start
 
 - Review the [Code of Conduct](#code-of-conduct) below
-- Check [Development setup](https://aligntrue.ai/docs/06-development/setup) to get your environment ready
-- Read [Testing workflow](https://aligntrue.ai/docs/07-contributing/testing-workflow) — all contributions need tests
+- Check [Development setup](https://sync.aligntrue.ai/docs/06-development/setup) to get your environment ready
+- Read [Testing workflow](https://sync.aligntrue.ai/docs/07-contributing/testing-workflow) — all contributions need tests
 
 ### While working
 
 - Create a feature branch
 - Write tests alongside your changes
-- Follow the relevant guide ([Aligns](https://aligntrue.ai/docs/07-contributing/creating-aligns), [docs](https://aligntrue.ai/docs/07-contributing/editing-docs), [exporters](https://aligntrue.ai/docs/07-contributing/adding-exporters))
+- Follow the relevant guide ([Aligns](https://sync.aligntrue.ai/docs/07-contributing/creating-aligns), [docs](https://sync.aligntrue.ai/docs/07-contributing/editing-docs), [exporters](https://sync.aligntrue.ai/docs/07-contributing/adding-exporters))
 - Keep a fast loop running: `pnpm test:fast`
 
 ### Before submitting a PR
@@ -102,10 +102,10 @@ We have zero tolerance for harassment, discrimination, or hostile behavior.
 
 ### Documentation
 
-- [Getting started](https://aligntrue.ai/docs/00-getting-started/00-quickstart)
+- [Getting started](https://sync.aligntrue.ai/docs/00-getting-started/00-quickstart)
 - [How AlignTrue works](/docs) — Core concepts and architecture
-- [Development guide](https://aligntrue.ai/docs/06-development/)
-- [Architecture](https://aligntrue.ai/docs/06-development/architecture)
+- [Development guide](https://sync.aligntrue.ai/docs/06-development/)
+- [Architecture](https://sync.aligntrue.ai/docs/06-development/architecture)
 
 ### Code references
 
@@ -127,7 +127,7 @@ Stuck or need guidance?
 - **Issues**: [GitHub Issues](https://github.com/AlignTrue/aligntrue-sync/issues) — Report bugs or ask for features
 - **Discussions**: [GitHub Discussions](https://github.com/AlignTrue/aligntrue-sync/discussions) — Ask questions, share ideas
 - **Documentation**: [Full docs](/docs) — Search for concepts or commands
-- **Development guide**: [Setup and workflow](https://aligntrue.ai/docs/06-development/setup)
+- **Development guide**: [Setup and workflow](https://sync.aligntrue.ai/docs/06-development/setup)
 
 ## Contribution checklist
 

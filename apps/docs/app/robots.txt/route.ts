@@ -1,4 +1,5 @@
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://aligntrue.ai";
+const BASE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://sync.aligntrue.ai";
 
 export const dynamic = "force-static";
 

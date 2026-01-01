@@ -132,7 +132,7 @@ Examples:
   # Restore the most recent backup quickly
   aligntrue backup restore --latest --yes
 
-Learn more: https://aligntrue.ai/backup
+Learn more: https://sync.aligntrue.ai/backup
 `;
 
 export async function backupCommand(argv: string[]): Promise<void> {

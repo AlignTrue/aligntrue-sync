@@ -21,7 +21,7 @@ describe("catalog-resolver", () => {
     });
 
     it("returns true for catalog URL", () => {
-      expect(isCatalogId("https://aligntrue.ai/a/abc123defgh")).toBe(true);
+      expect(isCatalogId("https://sync.aligntrue.ai/a/abc123defgh")).toBe(true);
     });
 
     it("returns false for near-miss lengths", () => {
@@ -47,7 +47,7 @@ describe("catalog-resolver", () => {
 
   describe("extractCatalogId", () => {
     it("extracts ID from catalog URL", () => {
-      expect(extractCatalogId("https://aligntrue.ai/a/abc123defgh")).toBe(
+      expect(extractCatalogId("https://sync.aligntrue.ai/a/abc123defgh")).toBe(
         "abc123defgh",
       );
     });

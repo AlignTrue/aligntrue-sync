@@ -1,0 +1,9 @@
+# Ignore intentionally invalid test fixtures
+packages/cli/tests/fixtures/invalid-config.yaml
+
+# Ignore build artifacts
+dist/
+out/
+.next/
+node_modules/
+

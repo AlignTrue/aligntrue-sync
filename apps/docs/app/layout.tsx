@@ -6,7 +6,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://aligntrue.ai";
+const BASE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://sync.aligntrue.ai";
 
 export const viewport: Viewport = {
   width: "device-width",

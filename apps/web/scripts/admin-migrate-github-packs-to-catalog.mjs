@@ -5,7 +5,7 @@
  *
  * This converts existing pack records in Upstash Redis:
  * - source: "github" -> "catalog"
- * - url/normalizedUrl -> https://aligntrue.ai/a/<id>
+ * - url/normalizedUrl -> https://sync.aligntrue.ai/a/<id>
  * - ensures containsAlignIds exists (keeps existing if present)
  *
  * Usage:
@@ -49,7 +49,7 @@ async function fetchPackIds(redis) {
 }
 
 function toCatalogUrls(id) {
-  const url = `https://aligntrue.ai/a/${id}`;
+  const url = `https://sync.aligntrue.ai/a/${id}`;
   return { url, normalizedUrl: url };
 }
 

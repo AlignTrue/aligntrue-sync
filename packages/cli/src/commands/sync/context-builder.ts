@@ -202,7 +202,7 @@ export async function buildSyncContext(
         "This repo uses team mode. New team members need to create a personal config.\n\n" +
         "Run: aligntrue team join\n\n" +
         "This creates your personal config (gitignored) for local settings.\n" +
-        "Learn more: https://aligntrue.ai/docs/01-guides/03-join-team",
+        "Learn more: https://sync.aligntrue.ai/docs/01-guides/03-join-team",
     );
   }
 

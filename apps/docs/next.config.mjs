@@ -16,7 +16,7 @@ export default withNextra({
   output: "export",
   assetPrefix:
     process.env.VERCEL_ENV === "production"
-      ? "https://docs.aligntrue.ai"
+      ? "https://docs.sync.aligntrue.ai"
       : undefined,
   reactStrictMode: true,
   // Transpile workspace packages that export TypeScript source directly

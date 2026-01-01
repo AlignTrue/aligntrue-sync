@@ -50,8 +50,8 @@ describe("pack detection", () => {
   it("detects a pack align with pack content", () => {
     const align: AlignRecord = {
       id: "test-pack",
-      url: "https://aligntrue.ai/a/test-pack",
-      normalizedUrl: "https://aligntrue.ai/a/test-pack",
+      url: "https://sync.aligntrue.ai/a/test-pack",
+      normalizedUrl: "https://sync.aligntrue.ai/a/test-pack",
       provider: "unknown",
       source: "catalog",
       kind: "pack",
@@ -101,8 +101,8 @@ describe("pack detection", () => {
   it("returns false when content is null", () => {
     const align: AlignRecord = {
       id: "test",
-      url: "https://aligntrue.ai/a/test",
-      normalizedUrl: "https://aligntrue.ai/a/test",
+      url: "https://sync.aligntrue.ai/a/test",
+      normalizedUrl: "https://sync.aligntrue.ai/a/test",
       provider: "unknown",
       source: "catalog",
       kind: "pack",

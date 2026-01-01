@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "AlignTrue",
     description:
       "Instantly sync rules across agents, people, projects and teams. Start in 60 seconds.",
-    url: "https://aligntrue.ai",
+    url: "https://sync.aligntrue.ai",
     siteName: "AlignTrue",
     images: [
       {
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
       "Instantly sync rules across agents, people, projects and teams. Start in 60 seconds.",
     images: ["/aligntrue-og-image.png"],
   },
-  metadataBase: new URL("https://aligntrue.ai"),
+  metadataBase: new URL("https://sync.aligntrue.ai"),
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

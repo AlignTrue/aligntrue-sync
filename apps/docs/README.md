@@ -13,7 +13,7 @@ NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 
 **Production:** Set the following in Vercel environment variables:
 
-- `NEXT_PUBLIC_SITE_URL=https://aligntrue.ai`
+- `NEXT_PUBLIC_SITE_URL=https://sync.aligntrue.ai`
 - `NEXT_PUBLIC_GA_ID=<your-google-analytics-4-id>` (optional, for analytics)
 
 ## Static Assets

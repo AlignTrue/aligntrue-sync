@@ -154,7 +154,7 @@ export default async function DocsLayout({
   // Recursively add /docs prefix to all route paths
   const prefixRoutes = (
     items: PageMapItem[],
-    prefix: string
+    prefix: string,
   ): PageMapItem[] => {
     return items.map((item) => {
       if ("route" in item && item.route) {

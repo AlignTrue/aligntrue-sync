@@ -12,17 +12,17 @@ export default {
   "install-cli": {
     title: "Install CLI",
     type: "page",
-    href: "https://aligntrue.ai/install",
+    href: "https://sync.aligntrue.ai/install",
   },
   "rule-catalog": {
     title: "Catalog",
     type: "page",
-    href: "https://aligntrue.ai/catalog#catalog",
+    href: "https://sync.aligntrue.ai/catalog#catalog",
   },
   "import-rule": {
     title: "Import",
     type: "page",
-    href: "https://aligntrue.ai/catalog",
+    href: "https://sync.aligntrue.ai/catalog",
   },
   aboutPage: {
     title: "About",

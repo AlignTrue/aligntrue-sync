@@ -38,7 +38,8 @@ import {
 } from "@/lib/aligns/rule-settings";
 import { RuleSettingsBadges } from "./RuleSettingsBadges";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://aligntrue.ai";
+const BASE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://sync.aligntrue.ai";
 
 const EMPTY_PACK_FILES: CachedPackFile[] = [];
 

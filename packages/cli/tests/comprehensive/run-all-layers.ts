@@ -87,7 +87,7 @@ function cleanupOldTestDirs(): void {
 
     if (deleted > 0) {
       console.log(
-        `Cleaned up ${deleted} old test director${deleted === 1 ? "y" : "ies"}`
+        `Cleaned up ${deleted} old test director${deleted === 1 ? "y" : "ies"}`,
       );
     }
   } catch {
@@ -117,7 +117,7 @@ try {
     `git clone --quiet https://github.com/AlignTrue/aligntrue-sync.git ${testDir}/repo`,
     {
       stdio: "pipe",
-    }
+    },
   );
 } catch {
   console.error("Failed to clone repository");
@@ -185,7 +185,7 @@ try {
 
     const layerScript = join(
       repoDir,
-      `packages/cli/tests/comprehensive/layers/layer-${layer}-*.ts`
+      `packages/cli/tests/comprehensive/layers/layer-${layer}-*.ts`,
     );
 
     let layerFile: string;
@@ -259,7 +259,7 @@ try {
     const status = result.passed ? "✓ PASS" : "✗ FAIL";
     const duration = Math.round(result.duration / 1000);
     console.log(
-      `  ${status} Layer ${result.layer}: ${result.name} (${duration}s)`
+      `  ${status} Layer ${result.layer}: ${result.name} (${duration}s)`,
     );
     if (result.error) {
       console.log(`       ${result.error}`);
@@ -303,7 +303,7 @@ try {
 function generateMarkdownReport(
   commit: string,
   results: LayerResult[],
-  duration: number
+  duration: number,
 ): string {
   const date = new Date().toLocaleDateString();
   const passed = results.filter((r) => r.passed).length;

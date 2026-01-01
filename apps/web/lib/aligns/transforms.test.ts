@@ -36,8 +36,8 @@ describe("toAlignSummary", () => {
       source: "catalog",
       kind: "pack",
       author: "@author",
-      normalizedUrl: "https://aligntrue.ai/a/pack-1",
-      url: "https://aligntrue.ai/a/pack-1",
+      normalizedUrl: "https://sync.aligntrue.ai/a/pack-1",
+      url: "https://sync.aligntrue.ai/a/pack-1",
     };
     const summary = toAlignSummary(catalogPack);
     expect(summary.displayAuthor).toBe("@author");
@@ -53,8 +53,8 @@ describe("toAlignSummary", () => {
       source: "catalog",
       kind: "pack",
       author: null,
-      normalizedUrl: "https://aligntrue.ai/a/pack-2",
-      url: "https://aligntrue.ai/a/pack-2",
+      normalizedUrl: "https://sync.aligntrue.ai/a/pack-2",
+      url: "https://sync.aligntrue.ai/a/pack-2",
     };
     const summary = toAlignSummary(catalogPack);
     expect(summary.displayAuthor).toBeNull();

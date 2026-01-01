@@ -386,7 +386,7 @@ async function configSet(
       clack.log.info(
         "\nDid you mean 'storage.personal'? Personal remote rules are configured in 'storage', not 'sources'.",
       );
-      clack.log.info("See: https://aligntrue.ai/team");
+      clack.log.info("See: https://sync.aligntrue.ai/team");
       exitWithError(2, `Invalid config key: ${key}`, {
         hint: "Use storage.personal for personal remotes (see team mode docs for details)",
       });

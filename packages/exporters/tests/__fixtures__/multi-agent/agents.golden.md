@@ -9,7 +9,7 @@
 This file contains links to the canonical rules in `.aligntrue/rules/`.
 AI agents should follow these linked guidelines.
 
-How to switch from links to inline rules: https://aligntrue.ai/export-content-mode
+How to switch from links to inline rules: https://sync.aligntrue.ai/export-content-mode
 
 ## General
 

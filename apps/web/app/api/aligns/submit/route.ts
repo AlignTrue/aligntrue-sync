@@ -73,7 +73,7 @@ export async function POST(req: Request) {
           error:
             "Only GitHub URLs are supported. Paste a link to a file (blob) or directory (tree).",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -84,7 +84,7 @@ export async function POST(req: Request) {
             "This URL points to a repository or directory without a specific file.",
           hint: "Paste a direct link to a file (e.g., .../blob/main/rules/file.md).",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -94,7 +94,7 @@ export async function POST(req: Request) {
           error:
             "Only GitHub URLs are supported. Paste a link to a file (blob) or directory (tree).",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -115,7 +115,7 @@ export async function POST(req: Request) {
       if (!primary) {
         return Response.json(
           { error: "Gist has no files to import." },
-          { status: 400 }
+          { status: 400 },
         );
       }
 
@@ -128,7 +128,7 @@ export async function POST(req: Request) {
             issueUrl:
               "https://github.com/AlignTrue/aligntrue-sync/issues/new?title=Support%20new%20file%20type&labels=enhancement",
           },
-          { status: 400 }
+          { status: 400 },
         );
       }
 
@@ -137,21 +137,21 @@ export async function POST(req: Request) {
           {
             error: `File too large (max ${MAX_FILE_BYTES / 1024}KB) or could not be fetched. Try a smaller file.`,
           },
-          { status: 413 }
+          { status: 413 },
         );
       }
 
       const content = await fetchWithLimit(
         primary.rawUrl,
         MAX_FILE_BYTES,
-        cachingFetch
+        cachingFetch,
       );
       if (content === null) {
         return Response.json(
           {
             error: `File too large (max ${MAX_FILE_BYTES / 1024}KB) or could not be fetched. Try a smaller file.`,
           },
-          { status: 413 }
+          { status: 413 },
         );
       }
 
@@ -194,7 +194,7 @@ export async function POST(req: Request) {
           issueUrl:
             "https://github.com/AlignTrue/aligntrue-sync/issues/new?title=Support%20new%20file%20type&labels=enhancement",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -211,7 +211,7 @@ export async function POST(req: Request) {
           error:
             "Could not fetch the file. It may be private, deleted, or temporarily unavailable.",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
     if (!cached || cached.kind !== "single") {
@@ -219,7 +219,7 @@ export async function POST(req: Request) {
         {
           error: `File too large (max ${MAX_FILE_BYTES / 1024}KB) or could not be fetched. Try a smaller file.`,
         },
-        { status: 413 }
+        { status: 413 },
       );
     }
 

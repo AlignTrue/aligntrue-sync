@@ -89,7 +89,7 @@ export async function exporters(args: string[]): Promise<void> {
         "Enable supports multiple exporters at once:",
         "  aligntrue exporters enable exporter1 exporter2 exporter3",
         "",
-        "Learn more at https://aligntrue.ai/exporters",
+        "Learn more at https://sync.aligntrue.ai/exporters",
       ],
     });
     return;
@@ -267,10 +267,10 @@ async function listExporters(): Promise<void> {
 
   console.log("\nNeed another agent?");
   console.log(
-    "  View all supported exporters: https://aligntrue.ai/docs/04-reference/agent-support",
+    "  View all supported exporters: https://sync.aligntrue.ai/docs/04-reference/agent-support",
   );
   console.log(
-    "  Don't see yours? https://aligntrue.ai/docs/07-contributing/adding-exporters",
+    "  Don't see yours? https://sync.aligntrue.ai/docs/07-contributing/adding-exporters",
   );
 }
 
@@ -358,7 +358,7 @@ async function enableExporters(
       console.error(`✗ Exporter(s) not found: ${notFound.join(", ")}`);
       console.error("  Run: aligntrue exporters list");
       console.error(
-        "  Don't see yours? https://aligntrue.ai/docs/07-contributing/adding-exporters",
+        "  Don't see yours? https://sync.aligntrue.ai/docs/07-contributing/adding-exporters",
       );
       exitWithError(1, `Exporter(s) not found: ${notFound.join(", ")}`, {
         hint: "Run: aligntrue exporters list",
@@ -437,7 +437,7 @@ async function enableExporters(
   console.log("\nNext step:");
   console.log("  Run: aligntrue sync");
 
-  console.log("\nLearn more at https://aligntrue.ai/agents");
+  console.log("\nLearn more at https://sync.aligntrue.ai/agents");
 }
 
 /**
