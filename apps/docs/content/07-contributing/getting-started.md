@@ -13,7 +13,7 @@ This guide explains how to find issues, understand the contribution workflow, an
 
 GitHub has a `good-first-issue` label for problems ideal for new contributors:
 
-1. Go to [AlignTrue issues](https://github.com/AlignTrue/aligntrue/issues)
+1. Go to [AlignTrue issues](https://github.com/AlignTrue/aligntrue-sync/issues)
 2. Filter by label: `good-first-issue`
 3. Pick one that interests you and comment to claim it
 
@@ -21,13 +21,13 @@ GitHub has a `good-first-issue` label for problems ideal for new contributors:
 
 Not limited to first issues? You can:
 
-- Look at [open issues](https://github.com/AlignTrue/aligntrue/issues) and filter by type (bug, enhancement, documentation)
+- Look at [open issues](https://github.com/AlignTrue/aligntrue-sync/issues) and filter by type (bug, enhancement, documentation)
 - Search by component (cli, exporters, schema, docs)
-- Check [GitHub Issues](https://github.com/AlignTrue/aligntrue/issues?q=is%3Aissue+is%3Aopen+label%3Aaccepted) for accepted ideas
+- Check [GitHub Issues](https://github.com/AlignTrue/aligntrue-sync/issues?q=is%3Aissue+is%3Aopen+label%3Aaccepted) for accepted ideas
 
 ### Ask what's needed
 
-Unsure what would help? Ask in [GitHub Discussions](https://github.com/AlignTrue/aligntrue/discussions). The team is happy to suggest areas that need work.
+Unsure what would help? Ask in [GitHub Discussions](https://github.com/AlignTrue/aligntrue-sync/discussions). The team is happy to suggest areas that need work.
 
 ## Contribution workflow
 
@@ -204,7 +204,7 @@ Comment on the PR with questions. We're happy to help debug or explain patterns.
 
 ### Asking questions
 
-- Ask in [discussions](https://github.com/AlignTrue/aligntrue/discussions) rather than opening issues for questions
+- Ask in [discussions](https://github.com/AlignTrue/aligntrue-sync/discussions) rather than opening issues for questions
 - Share context and what you've already tried
 
 ### Reviewing others' PRs
@@ -215,7 +215,7 @@ Comment on the PR with questions. We're happy to help debug or explain patterns.
 
 ## Next steps
 
-- **Ready to contribute?** Pick an issue from [good-first-issue](https://github.com/AlignTrue/aligntrue/issues?q=label%3Agood-first-issue)
+- **Ready to contribute?** Pick an issue from [good-first-issue](https://github.com/AlignTrue/aligntrue-sync/issues?q=label%3Agood-first-issue)
 - **Want more context?** Read the [Contributing index](/docs/07-contributing)
 - **Need setup help?** See [Development setup](/docs/06-development/setup)
 - **Specific guide?** Choose your contribution type:

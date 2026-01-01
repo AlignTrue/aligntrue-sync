@@ -72,7 +72,7 @@ sources:
   - type: local
     path: .aligntrue/rules
   - type: git
-    url: https://github.com/AlignTrue/aligntrue
+    url: https://github.com/AlignTrue/aligntrue-sync
     path: examples/aligns/global.yaml
 ```
 
@@ -87,7 +87,7 @@ Git sources fetch rules from any git repository:
 ```yaml
 sources:
   - type: git
-    url: https://github.com/AlignTrue/aligntrue
+    url: https://github.com/AlignTrue/aligntrue-sync
     path: examples/aligns/global.yaml
   - type: git
     url: https://github.com/yourorg/rules
@@ -509,7 +509,7 @@ Path normalization automatically handles:
 
 ```bash
 # Clone repo
-git clone https://github.com/AlignTrue/aligntrue.git
+git clone https://github.com/AlignTrue/aligntrue-sync.git
 cd aligntrue
 
 # Install dependencies

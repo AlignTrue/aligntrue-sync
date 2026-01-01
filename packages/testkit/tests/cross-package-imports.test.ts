@@ -130,7 +130,7 @@ function resolveImport(
 
 /**
  * Discover all workspace packages under the provided roots.
- * Includes platform packages so imports like @aligntrue/ops-core resolve.
+ * Discovers workspace packages for import validation.
  */
 function discoverWorkspacePackages(roots: string[]): WorkspacePackage[] {
   const packages: WorkspacePackage[] = [];
@@ -167,9 +167,6 @@ describe("cross-package imports", () => {
     const workspaceRoot = join(testDir, "../../..");
     const packageRoots = [
       join(workspaceRoot, "packages"),
-      join(workspaceRoot, "platform"),
-      join(workspaceRoot, "platform/packs"),
-      join(workspaceRoot, "platform/ops-shared"),
     ];
     const workspacePackages = discoverWorkspacePackages(packageRoots);
     const packageMap = new Map(

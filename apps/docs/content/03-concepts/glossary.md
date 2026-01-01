@@ -64,7 +64,7 @@ An Align can be:
 
 **File formats:** `.md` files in `.aligntrue/rules/`
 
-**Related:** [Align Spec v1](https://github.com/AlignTrue/aligntrue/blob/main/spec/align-spec-v1.md), [Creating Aligns](/docs/07-contributing/creating-aligns)
+**Related:** [Align Spec v1](https://github.com/AlignTrue/aligntrue-sync/blob/main/spec/align-spec-v1.md), [Creating Aligns](/docs/07-contributing/creating-aligns)
 
 ### Align pack
 

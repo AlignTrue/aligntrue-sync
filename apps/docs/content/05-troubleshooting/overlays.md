@@ -290,4 +290,4 @@ aligntrue drift
 3. Review drift with `aligntrue drift`
 4. Check the [Overlays Guide](/docs/02-customization/overlays) for complete documentation
 
-If none of these resolve your issue, check the main [Troubleshooting guide](/docs/05-troubleshooting) or open an issue on [GitHub](https://github.com/AlignTrue/aligntrue/issues).
+If none of these resolve your issue, check the main [Troubleshooting guide](/docs/05-troubleshooting) or open an issue on [GitHub](https://github.com/AlignTrue/aligntrue-sync/issues).

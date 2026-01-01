@@ -932,6 +932,6 @@ This is a breaking change. To migrate existing projects:
 - Cursor exporter
 - Local source provider
 
-[Unreleased]: https://github.com/AlignTrue/aligntrue/compare/v0.1.0-alpha.2...HEAD
-[0.1.0-alpha.2]: https://github.com/AlignTrue/aligntrue/compare/v0.1.0-alpha.1...v0.1.0-alpha.2
-[0.1.0-alpha.1]: https://github.com/AlignTrue/aligntrue/releases/tag/v0.1.0-alpha.1
+[Unreleased]: https://github.com/AlignTrue/aligntrue-sync/compare/v0.1.0-alpha.2...HEAD
+[0.1.0-alpha.2]: https://github.com/AlignTrue/aligntrue-sync/compare/v0.1.0-alpha.1...v0.1.0-alpha.2
+[0.1.0-alpha.1]: https://github.com/AlignTrue/aligntrue-sync/releases/tag/v0.1.0-alpha.1

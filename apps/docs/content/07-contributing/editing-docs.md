@@ -130,7 +130,7 @@ See [team mode](/docs/03-concepts/team-mode) for details.
 External links remain unchanged:
 
 ```markdown
-[GitHub repository](https://github.com/AlignTrue/aligntrue)
+[GitHub repository](https://github.com/AlignTrue/aligntrue-sync)
 ```
 
 ### Anchor links

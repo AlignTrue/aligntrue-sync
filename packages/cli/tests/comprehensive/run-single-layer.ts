@@ -38,10 +38,10 @@ process.env.LOG_FILE = logFile;
 console.log("Cloning repository...");
 try {
   execSync(
-    `git clone --quiet https://github.com/AlignTrue/aligntrue.git ${testDir}/repo`,
+    `git clone --quiet https://github.com/AlignTrue/aligntrue-sync.git ${testDir}/repo`,
     {
       stdio: "pipe",
-    },
+    }
   );
 } catch {
   console.error("Failed to clone repository");
@@ -78,7 +78,7 @@ console.log(`\nExecuting Layer ${layer}...\n`);
 
 const layerScript = join(
   repoDir,
-  `packages/cli/tests/comprehensive/layers/layer-${layer}-*.ts`,
+  `packages/cli/tests/comprehensive/layers/layer-${layer}-*.ts`
 );
 const layerFiles = globSync(layerScript);
 
@@ -110,7 +110,7 @@ try {
 
   const reportPath = join(
     internalDocsDir,
-    `test-layer-${layer}-${timestamp}.log`,
+    `test-layer-${layer}-${timestamp}.log`
   );
   if (existsSync(logFile)) {
     copyFileSync(logFile, reportPath);

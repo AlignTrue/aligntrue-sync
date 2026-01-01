@@ -5,10 +5,10 @@ const config = {
   logo: <AlignTrueLogo size="md" />,
   logoLink: "https://aligntrue.ai",
   project: {
-    link: "https://github.com/AlignTrue/aligntrue",
+    link: "https://github.com/AlignTrue/aligntrue-sync",
   },
   docsRepositoryBase:
-    "https://github.com/AlignTrue/aligntrue/tree/main/apps/docs",
+    "https://github.com/AlignTrue/aligntrue-sync/tree/main/apps/docs",
 
   // Table of contents configuration
   toc: {

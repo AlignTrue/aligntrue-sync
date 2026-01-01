@@ -21,7 +21,7 @@ Complete, runnable examples in the AlignTrue repository:
 - Overlay customizations
 - Test scripts for validation
 
-[View golden-repo on GitHub →](https://github.com/AlignTrue/aligntrue/tree/main/examples/golden-repo)
+[View golden-repo on GitHub →](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/golden-repo)
 
 **When to use:** Learning AlignTrue basics, solo developer workflow
 
@@ -37,7 +37,7 @@ Complete, runnable examples in the AlignTrue repository:
 - Temporary overrides with comments
 - Overlay status and diff commands
 
-[View overlays-demo on GitHub →](https://github.com/AlignTrue/aligntrue/tree/main/examples/overlays-demo)
+[View overlays-demo on GitHub →](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/overlays-demo)
 
 **When to use:** Customizing third-party Aligns, team severity preferences
 
@@ -53,7 +53,7 @@ Complete, runnable examples in the AlignTrue repository:
 - Hierarchical merge order
 - Scope validation
 
-[View monorepo-scopes on GitHub →](https://github.com/AlignTrue/aligntrue/tree/main/examples/monorepo-scopes)
+[View monorepo-scopes on GitHub →](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/monorepo-scopes)
 
 **When to use:** Monorepos, multiple tech stacks, team boundaries
 
@@ -69,7 +69,7 @@ Complete, runnable examples in the AlignTrue repository:
 - Fidelity notes per agent
 - Content hash verification
 
-[View multi-agent on GitHub →](https://github.com/AlignTrue/aligntrue/tree/main/examples/multi-agent)
+[View multi-agent on GitHub →](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/multi-agent)
 
 **When to use:** Using 2+ AI agents, agent-specific customization
 
@@ -83,27 +83,27 @@ Complete, runnable examples in the AlignTrue repository:
 
 ### Foundation Aligns
 
-- **[Base Global](https://github.com/AlignTrue/aligntrue/blob/main/examples/aligns/global.md)** - Essential baseline rules for all AI coding agents. Ensures deterministic behavior, clear output formatting, and consistent code quality practices. Natural markdown format.
+- **[Base Global](https://github.com/AlignTrue/aligntrue-sync/blob/main/examples/aligns/global.md)** - Essential baseline rules for all AI coding agents. Ensures deterministic behavior, clear output formatting, and consistent code quality practices. Natural markdown format.
 
-- **[Base Documentation](https://github.com/AlignTrue/aligntrue/blob/main/examples/aligns/docs.md)** - Docs-as-code baseline enforcing readme-first development, CI-enforced quality, and behavior-synced documentation updates. Natural markdown format.
+- **[Base Documentation](https://github.com/AlignTrue/aligntrue-sync/blob/main/examples/aligns/docs.md)** - Docs-as-code baseline enforcing readme-first development, CI-enforced quality, and behavior-synced documentation updates. Natural markdown format.
 
-- **[TypeScript Standards](https://github.com/AlignTrue/aligntrue/blob/main/examples/aligns/typescript.md)** - TypeScript development standards for correctness, safety, and maintainability. Enforces strict compiler settings and no 'any' types. Natural markdown format.
+- **[TypeScript Standards](https://github.com/AlignTrue/aligntrue-sync/blob/main/examples/aligns/typescript.md)** - TypeScript development standards for correctness, safety, and maintainability. Enforces strict compiler settings and no 'any' types. Natural markdown format.
 
-- **[Testing Baseline](https://github.com/AlignTrue/aligntrue/blob/main/examples/aligns/testing.md)** - Testing baseline ensuring fast, deterministic, useful tests with clear strategy. Emphasizes test pyramid balance and speed requirements. Natural markdown format.
+- **[Testing Baseline](https://github.com/AlignTrue/aligntrue-sync/blob/main/examples/aligns/testing.md)** - Testing baseline ensuring fast, deterministic, useful tests with clear strategy. Emphasizes test pyramid balance and speed requirements. Natural markdown format.
 
-- **[TDD Workflow](https://github.com/AlignTrue/aligntrue/blob/main/examples/aligns/tdd.md)** - Test-Driven Development workflow implementing red-green-refactor cycle. Enforces writing tests before implementation. Natural markdown format.
+- **[TDD Workflow](https://github.com/AlignTrue/aligntrue-sync/blob/main/examples/aligns/tdd.md)** - Test-Driven Development workflow implementing red-green-refactor cycle. Enforces writing tests before implementation. Natural markdown format.
 
-- **[Debugging Workflow](https://github.com/AlignTrue/aligntrue/blob/main/examples/aligns/debugging.md)** - Systematic debugging workflow ensuring reproduce-before-fix discipline. Covers reproduce, reduce, root-cause, fix, and prevent cycles. Natural markdown format.
+- **[Debugging Workflow](https://github.com/AlignTrue/aligntrue-sync/blob/main/examples/aligns/debugging.md)** - Systematic debugging workflow ensuring reproduce-before-fix discipline. Covers reproduce, reduce, root-cause, fix, and prevent cycles. Natural markdown format.
 
-- **[Security and Compliance](https://github.com/AlignTrue/aligntrue/blob/main/examples/aligns/security.md)** - Security and compliance baseline covering secrets management, supply chain security, and dependency auditing. Natural markdown format.
+- **[Security and Compliance](https://github.com/AlignTrue/aligntrue-sync/blob/main/examples/aligns/security.md)** - Security and compliance baseline covering secrets management, supply chain security, and dependency auditing. Natural markdown format.
 
 ### Framework & stack Aligns
 
-- **[Next.js App Router](https://github.com/AlignTrue/aligntrue/blob/main/examples/aligns/nextjs_app_router.md)** - Best practices for Next.js App Router covering server/client boundaries, caching strategies, and data fetching patterns. Natural markdown format.
+- **[Next.js App Router](https://github.com/AlignTrue/aligntrue-sync/blob/main/examples/aligns/nextjs_app_router.md)** - Best practices for Next.js App Router covering server/client boundaries, caching strategies, and data fetching patterns. Natural markdown format.
 
-- **[Vercel Deployments](https://github.com/AlignTrue/aligntrue/blob/main/examples/aligns/vercel_deployments.md)** - Vercel deployment best practices covering environment tiers, runtime selection, and preview hygiene. Natural markdown format.
+- **[Vercel Deployments](https://github.com/AlignTrue/aligntrue-sync/blob/main/examples/aligns/vercel_deployments.md)** - Vercel deployment best practices covering environment tiers, runtime selection, and preview hygiene. Natural markdown format.
 
-- **[Web Quality Standards](https://github.com/AlignTrue/aligntrue/blob/main/examples/aligns/web_quality.md)** - Core Web Vitals targets, performance budgets, and accessibility standards. Enforces LCP under 2.5s and WCAG 2.0 AA compliance. Natural markdown format.
+- **[Web Quality Standards](https://github.com/AlignTrue/aligntrue-sync/blob/main/examples/aligns/web_quality.md)** - Core Web Vitals targets, performance budgets, and accessibility standards. Enforces LCP under 2.5s and WCAG 2.0 AA compliance. Natural markdown format.
 
 ## Align details
 
@@ -139,7 +139,7 @@ aligntrue sync
 
 ### Browse on GitHub
 
-All Align YAML files are available in the [AlignTrue repository](https://github.com/AlignTrue/aligntrue/tree/main/examples/aligns).
+All Align YAML files are available in the [AlignTrue repository](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/aligns).
 
 ### Customize with overlays
 

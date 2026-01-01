@@ -12,7 +12,7 @@ Reference Aligns directly from this repository:
 # .aligntrue.yaml
 sources:
   - type: git
-    url: https://github.com/AlignTrue/aligntrue
+    url: https://github.com/AlignTrue/aligntrue-sync
     path: examples/aligns/testing.md
 ```
 

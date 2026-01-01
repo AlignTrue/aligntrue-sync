@@ -11,7 +11,7 @@ LAYER="${1:-}"
 TIMESTAMP=$(date +%s)
 TEST_DIR="/tmp/aligntrue-test-${TIMESTAMP}"
 LOG_FILE="${TEST_DIR}/test-output.log"
-REPO_URL="${REPO_URL:-https://github.com/AlignTrue/aligntrue.git}"
+REPO_URL="${REPO_URL:-https://github.com/AlignTrue/aligntrue-sync.git}"
 
 # Colors for output
 RED='\033[0;31m'

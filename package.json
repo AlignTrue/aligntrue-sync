@@ -5,7 +5,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlignTrue/aligntrue-sync.git"
+    "url": "https://github.com/AlignTrue/aligntrue-sync-sync.git"
   },
   "scripts": {
     "build": "turbo run build",

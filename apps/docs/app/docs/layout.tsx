@@ -31,7 +31,7 @@ function DocsFooter() {
         <p>
           © {currentYear} AlignTrue.{" "}
           <a
-            href="https://github.com/AlignTrue/aligntrue/blob/main/LICENSE"
+            href="https://github.com/AlignTrue/aligntrue-sync/blob/main/LICENSE"
             target="_blank"
             rel="noreferrer"
             style={{ textDecoration: "underline" }}
@@ -54,7 +54,7 @@ function DocsFooter() {
           }}
         >
           <a
-            href="https://github.com/AlignTrue/aligntrue/actions"
+            href="https://github.com/AlignTrue/aligntrue-sync/actions"
             target="_blank"
             rel="noopener noreferrer"
             title="CI Status"
@@ -96,7 +96,7 @@ function DocsFooter() {
             />
           </a>
           <a
-            href="https://github.com/AlignTrue/aligntrue/security/code-scanning"
+            href="https://github.com/AlignTrue/aligntrue-sync/security/code-scanning"
             target="_blank"
             rel="noopener noreferrer"
             title="Security Scan"
@@ -110,7 +110,7 @@ function DocsFooter() {
             />
           </a>
           <a
-            href="https://github.com/AlignTrue/aligntrue/commits/main"
+            href="https://github.com/AlignTrue/aligntrue-sync/commits/main"
             target="_blank"
             rel="noopener noreferrer"
             title="Last commit"
@@ -124,7 +124,7 @@ function DocsFooter() {
             />
           </a>
           <a
-            href="https://github.com/AlignTrue/aligntrue/blob/main/LICENSE"
+            href="https://github.com/AlignTrue/aligntrue-sync/blob/main/LICENSE"
             target="_blank"
             rel="noopener noreferrer"
             title="MIT License"
@@ -154,7 +154,7 @@ export default async function DocsLayout({
   // Recursively add /docs prefix to all route paths
   const prefixRoutes = (
     items: PageMapItem[],
-    prefix: string,
+    prefix: string
   ): PageMapItem[] => {
     return items.map((item) => {
       if ("route" in item && item.route) {

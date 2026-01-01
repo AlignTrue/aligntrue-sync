@@ -164,7 +164,7 @@ export function CatalogPageClient() {
 
   const totalPages = useMemo(
     () => Math.max(1, Math.ceil(total / pageSize)),
-    [total, pageSize],
+    [total, pageSize]
   );
 
   const startIndex = total === 0 ? 0 : page * pageSize + 1;
@@ -179,7 +179,7 @@ export function CatalogPageClient() {
         <div className="grid-pattern" aria-hidden="true" />
         <div className="relative max-w-6xl mx-auto space-y-8">
           <a
-            href="https://github.com/AlignTrue/aligntrue/blob/main/LICENSE"
+            href="https://github.com/AlignTrue/aligntrue-sync/blob/main/LICENSE"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-1.5 mx-auto rounded-full border border-border bg-background/80 px-3 py-1 text-xs font-medium text-muted-foreground shadow-sm transition-colors hover:bg-muted hover:text-foreground"

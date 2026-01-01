@@ -5,11 +5,11 @@ import { filenameFromUrl, parseGitHubUrl } from "./urlUtils";
 describe("parseGitHubUrl", () => {
   it("extracts owner, repo, and ownerUrl from a GitHub URL", () => {
     const result = parseGitHubUrl(
-      "https://github.com/AlignTrue/aligntrue/blob/main/README.md",
+      "https://github.com/AlignTrue/aligntrue-sync/blob/main/README.md"
     );
 
     expect(result.owner).toBe("@AlignTrue");
-    expect(result.repo).toBe("aligntrue");
+    expect(result.repo).toBe("aligntrue-sync");
     expect(result.ownerUrl).toBe("https://github.com/AlignTrue");
   });
 
@@ -33,7 +33,7 @@ describe("parseGitHubUrl", () => {
 describe("filenameFromUrl", () => {
   it("returns the filename from a GitHub blob URL", () => {
     const name = filenameFromUrl(
-      "https://github.com/org/repo/blob/main/rules/align.md",
+      "https://github.com/org/repo/blob/main/rules/align.md"
     );
     expect(name).toBe("align.md");
   });

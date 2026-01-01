@@ -22,7 +22,7 @@ export function SiteFooter() {
               About
             </a>
             <a
-              href="https://github.com/AlignTrue/aligntrue"
+              href="https://github.com/AlignTrue/aligntrue-sync"
               target="_blank"
               rel="noreferrer"
               className="hover:underline"
@@ -33,7 +33,7 @@ export function SiteFooter() {
           <p>
             © {currentYear} AlignTrue.{" "}
             <a
-              href="https://github.com/AlignTrue/aligntrue/blob/main/LICENSE"
+              href="https://github.com/AlignTrue/aligntrue-sync/blob/main/LICENSE"
               target="_blank"
               rel="noreferrer"
               className="underline"
@@ -49,7 +49,7 @@ export function SiteFooter() {
 
         <div className="flex flex-wrap gap-3 items-center justify-center md:justify-end">
           <a
-            href="https://github.com/AlignTrue/aligntrue/actions"
+            href="https://github.com/AlignTrue/aligntrue-sync/actions"
             target="_blank"
             rel="noopener noreferrer"
             className="no-underline"
@@ -91,7 +91,7 @@ export function SiteFooter() {
             />
           </a>
           <a
-            href="https://github.com/AlignTrue/aligntrue/blob/main/LICENSE"
+            href="https://github.com/AlignTrue/aligntrue-sync/blob/main/LICENSE"
             target="_blank"
             rel="noopener noreferrer"
             className="no-underline"

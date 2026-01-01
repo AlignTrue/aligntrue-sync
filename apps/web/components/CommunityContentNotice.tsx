@@ -23,9 +23,9 @@ type CommunityContentNoticeProps = {
 function buildReportUrl(alignId: string, alignUrl: string): string {
   const title = encodeURIComponent(`Report align: ${alignId}`);
   const body = encodeURIComponent(
-    `Align ID: ${alignId}\nAlign URL: ${alignUrl}\nReason: \nDetails: \n`,
+    `Align ID: ${alignId}\nAlign URL: ${alignUrl}\nReason: \nDetails: \n`
   );
-  return `https://github.com/AlignTrue/aligntrue/issues/new?labels=report-align&title=${title}&body=${body}`;
+  return `https://github.com/AlignTrue/aligntrue-sync/issues/new?labels=report-align&title=${title}&body=${body}`;
 }
 
 export function CommunityContentNotice({
@@ -48,7 +48,7 @@ export function CommunityContentNotice({
             aria-label="Community content info"
             className={cn(
               "inline-flex h-8 w-8 items-center justify-center rounded-md border border-border/70 bg-muted/60 text-muted-foreground transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background",
-              className,
+              className
             )}
           >
             <Info size={14} className="shrink-0" />
@@ -83,7 +83,7 @@ export function CommunityContentNotice({
     <div
       className={cn(
         "flex items-center gap-2 rounded-md border border-border/70 bg-muted/60 px-3 py-2",
-        className,
+        className
       )}
     >
       <TooltipProvider delayDuration={100}>

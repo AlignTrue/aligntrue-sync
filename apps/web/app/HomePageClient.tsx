@@ -30,7 +30,7 @@ import type { AlignSummary } from "@/lib/aligns/transforms";
 
 async function fetchList(
   path: string,
-  init?: RequestInit,
+  init?: RequestInit
 ): Promise<AlignSummary[]> {
   const response = await fetch(path, init);
   if (!response.ok) return [];
@@ -181,7 +181,7 @@ export function HomePageClient() {
         <div className="grid-pattern" aria-hidden="true" />
         <div className="relative max-w-6xl mx-auto space-y-8">
           <a
-            href="https://github.com/AlignTrue/aligntrue/blob/main/LICENSE"
+            href="https://github.com/AlignTrue/aligntrue-sync/blob/main/LICENSE"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-1.5 mx-auto rounded-full border border-border bg-background/80 px-3 py-1 text-xs font-medium text-muted-foreground shadow-sm transition-colors hover:bg-muted hover:text-foreground fade-in-up"

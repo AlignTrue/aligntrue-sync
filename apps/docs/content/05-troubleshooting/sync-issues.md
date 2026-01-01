@@ -471,5 +471,5 @@ If you're still stuck:
    ```
 
 4. **File an issue:**
-   - Repository: https://github.com/AlignTrue/aligntrue
+   - Repository: https://github.com/AlignTrue/aligntrue-sync
    - Include verbose output and configuration

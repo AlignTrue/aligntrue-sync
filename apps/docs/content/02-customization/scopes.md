@@ -11,7 +11,7 @@ description: Path-based rule application for monorepos with hierarchical merge o
 
 Scopes enable path-based rule application for monorepos. Apply different rules to frontend vs backend, new code vs legacy, or team-specific directories while maintaining a shared base.
 
-> **See it in action:** Check out the [monorepo scopes example](https://github.com/AlignTrue/aligntrue/tree/main/examples/monorepo-scopes) for a working demonstration.
+> **See it in action:** Check out the [monorepo scopes example](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/monorepo-scopes) for a working demonstration.
 
 > **Real-world scenarios:** See [5 complete examples](#scenarios) below for progressive adoption, team boundaries, multi-stack monorepos, frontend-backend splits, and microservices.
 
@@ -341,7 +341,7 @@ merge:
 
 ## Scenario-based examples
 
-> **More examples:** See [STRUCTURE.md](https://github.com/AlignTrue/aligntrue/tree/main/examples/monorepo-scopes/STRUCTURE.md) in the monorepo scopes example for detailed architecture explanation.
+> **More examples:** See [STRUCTURE.md](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/monorepo-scopes/STRUCTURE.md) in the monorepo scopes example for detailed architecture explanation.
 
 ### Scenario 1: Solo developer - Next.js + Node.js monorepo
 

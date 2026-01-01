@@ -88,7 +88,7 @@ export class MyAgentExporter extends ExporterBase {
 
   async export(
     request: ScopedExportRequest,
-    options: ExportOptions,
+    options: ExportOptions
   ): Promise<ExportResult> {
     const { outputDir, dryRun = false } = options;
     const sections = request.align.sections ?? [];
@@ -103,7 +103,7 @@ export class MyAgentExporter extends ExporterBase {
       outputPath,
       content,
       dryRun,
-      options,
+      options
     );
 
     // Surface any partial fidelity (e.g., unsupported metadata)
@@ -156,7 +156,7 @@ describe("MyAgentExporter", () => {
   beforeEach(() => {
     outputDir = join(
       tmpdir(),
-      `my-agent-${Math.random().toString(16).slice(2)}`,
+      `my-agent-${Math.random().toString(16).slice(2)}`
     );
   });
 
@@ -179,12 +179,12 @@ describe("MyAgentExporter", () => {
         },
         outputPath,
       },
-      { outputDir, dryRun: false },
+      { outputDir, dryRun: false }
     );
 
     expect(result.filesWritten).toEqual([join(outputDir, outputPath)]);
     expect(readFileSync(join(outputDir, outputPath), "utf-8")).toContain(
-      "Test rule",
+      "Test rule"
     );
   });
 
@@ -199,7 +199,7 @@ describe("MyAgentExporter", () => {
         },
         outputPath,
       },
-      { outputDir, dryRun: true },
+      { outputDir, dryRun: true }
     );
 
     expect(result.filesWritten).toEqual([]);
@@ -222,7 +222,7 @@ describe("MyAgentExporter", () => {
         },
         outputPath,
       },
-      { outputDir, dryRun: true },
+      { outputDir, dryRun: true }
     );
 
     expect(result.fidelityNotes).toBeDefined();
@@ -537,15 +537,15 @@ Once merged, you'll be listed as the maintainer for that exporter. We'll ping yo
 - [Command Reference](/docs/04-reference/cli-reference) - CLI usage
 - [Quickstart](/docs/00-getting-started/00-quickstart) - Get started with AlignTrue
 - [Sync Behavior](/docs/03-concepts/sync-behavior) - How exports are triggered
-- [Schema validation](https://github.com/AlignTrue/aligntrue/tree/main/packages/schema) - IR validation and type definitions
-- [Exporter manifest schema](https://github.com/AlignTrue/aligntrue/blob/main/packages/exporters/schema/manifest.schema.json) - Required fields and validation
-- [Plugin contracts](https://github.com/AlignTrue/aligntrue/blob/main/packages/plugin-contracts/src/exporter.ts) - Exporter interfaces and options
-- [Technical CONTRIBUTING.md](https://github.com/AlignTrue/aligntrue/blob/main/packages/exporters/CONTRIBUTING.md) - Detailed requirements
+- [Schema validation](https://github.com/AlignTrue/aligntrue-sync/tree/main/packages/schema) - IR validation and type definitions
+- [Exporter manifest schema](https://github.com/AlignTrue/aligntrue-sync/blob/main/packages/exporters/schema/manifest.schema.json) - Required fields and validation
+- [Plugin contracts](https://github.com/AlignTrue/aligntrue-sync/blob/main/packages/plugin-contracts/src/exporter.ts) - Exporter interfaces and options
+- [Technical CONTRIBUTING.md](https://github.com/AlignTrue/aligntrue-sync/blob/main/packages/exporters/CONTRIBUTING.md) - Detailed requirements
 
 ### Community
 
-- GitHub Discussions: [github.com/AlignTrue/aligntrue/discussions](https://github.com/AlignTrue/aligntrue/discussions)
-- Issues: [github.com/AlignTrue/aligntrue/issues](https://github.com/AlignTrue/aligntrue/issues)
+- GitHub Discussions: [github.com/AlignTrue/aligntrue-sync/discussions](https://github.com/AlignTrue/aligntrue-sync/discussions)
+- Issues: [github.com/AlignTrue/aligntrue-sync/issues](https://github.com/AlignTrue/aligntrue-sync/issues)
 
 ---
 

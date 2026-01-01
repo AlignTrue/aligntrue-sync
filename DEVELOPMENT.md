@@ -1100,7 +1100,7 @@ import {
 // Create descriptive errors with actionable guidance
 throw new ConfigError(
   "Invalid config field: profile.id missing",
-  "Set profile.id in .aligntrue/config.yaml",
+  "Set profile.id in .aligntrue/config.yaml"
 ).withNextSteps(["Run: aligntrue init", "Edit: aligntrue config edit"]);
 
 // Prefer ErrorFactory helpers for common cases
@@ -1110,7 +1110,7 @@ throw ErrorFactory.configNotFound(configPath);
 throw new AlignTrueError(
   "Unexpected state while resolving plugs",
   "UNEXPECTED_STATE",
-  1,
+  1
 );
 ```
 
@@ -1158,7 +1158,7 @@ Create reusable test fixtures near complex logic:
 ```typescript
 // packages/core/tests/helpers/test-fixtures.ts
 export function createMockConfig(
-  overrides?: Partial<AlignTrueConfig>,
+  overrides?: Partial<AlignTrueConfig>
 ): AlignTrueConfig {
   return {
     version: "1.0.0",
@@ -1674,7 +1674,7 @@ After pushing these files, the workflow starts on next pull request:
 
 To verify security patch auto-merge works:
 
-1. **Check a recent security alert:** Visit https://github.com/AlignTrue/aligntrue/security/dependabot
+1. **Check a recent security alert:** Visit https://github.com/AlignTrue/aligntrue-sync/security/dependabot
 2. **Wait for next Dependabot run** (Mondays, or trigger manually with `gh workflow run`)
 3. **Look for security-specific comment:** If Dependabot creates a PR with "security" label or "Dependabot security update" in body, the workflow will:
    - Show `🔒 Auto-approved: Security patch` comment
@@ -2128,7 +2128,7 @@ This installs dependencies and builds all packages. You're ready to develop!
 Need to test the latest CLI changes straight from `main`? Because `@aligntrue/cli` imports other workspace packages, build the entire repo before running the binary:
 
 ```bash
-git clone https://github.com/AlignTrue/aligntrue.git
+git clone https://github.com/AlignTrue/aligntrue-sync.git
 cd aligntrue
 pnpm install          # install all workspace dependencies
 pnpm build            # compile every package (core/schema/exporters/cli)

@@ -36,14 +36,14 @@ function stripFrontmatter(content) {
  */
 function transformLinks(
   content,
-  repoUrl = "https://github.com/AlignTrue/aligntrue",
+  repoUrl = "https://github.com/AlignTrue/aligntrue-sync"
 ) {
   // Transform /docs/ links to full docs site URLs
   content = content.replace(
     /\[([^\]]+)\]\(\/docs\/([^)]+)\)/g,
     (match, text, path) => {
       return `[${text}](https://aligntrue.ai/docs/${path})`;
-    },
+    }
   );
 
   // Transform relative links to repo URLs
@@ -51,7 +51,7 @@ function transformLinks(
     /\[([^\]]+)\]\(\.\.\/([^)]+)\)/g,
     (match, text, path) => {
       return `[${text}](${repoUrl}/blob/main/${path})`;
-    },
+    }
   );
 
   return content;
@@ -229,7 +229,7 @@ function main() {
     console.log("\n✓ All repo files generated successfully");
     console.log("\nNext steps:");
     console.log(
-      "  1. Review changes: git diff README.md CONTRIBUTING.md DEVELOPMENT.md SECURITY.md",
+      "  1. Review changes: git diff README.md CONTRIBUTING.md DEVELOPMENT.md SECURITY.md"
     );
     console.log("  2. Commit both docs source and generated files");
   } catch (error) {

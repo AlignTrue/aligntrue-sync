@@ -34,7 +34,7 @@ Both install the same CLI tool.
 
 ## Documentation
 
-For full documentation, see the main [@aligntrue/cli package](https://www.npmjs.com/package/@aligntrue/cli) or visit [github.com/AlignTrue/aligntrue](https://github.com/AlignTrue/aligntrue).
+For full documentation, see the main [@aligntrue/cli package](https://www.npmjs.com/package/@aligntrue/cli) or visit [github.com/AlignTrue/aligntrue-sync](https://github.com/AlignTrue/aligntrue-sync).
 
 ## License
 

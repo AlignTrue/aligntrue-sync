@@ -26,7 +26,7 @@ export function BetaBanner() {
     if (mounted) {
       document.documentElement.style.setProperty(
         "--banner-height",
-        dismissed ? "0px" : "48px",
+        dismissed ? "0px" : "48px"
       );
     }
   }, [mounted, dismissed]);
@@ -38,7 +38,7 @@ export function BetaBanner() {
       <div className="flex items-center gap-2 min-w-[200px] justify-center flex-1 flex-wrap">
         <span>🚀 AlignTrue is in beta.</span>
         <a
-          href="https://github.com/AlignTrue/aligntrue"
+          href="https://github.com/AlignTrue/aligntrue-sync"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 underline text-primary-foreground/80 hover:text-primary-foreground font-semibold"

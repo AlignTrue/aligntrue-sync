@@ -29,8 +29,8 @@ Extend AlignTrue's core platform and integrations.
 ## Getting started
 
 1. **New to contributing?** Start with [How to contribute](/docs/07-contributing/getting-started).
-2. **Unsure what to work on?** Check [GitHub Issues](https://github.com/AlignTrue/aligntrue/issues) for `good-first-issue` labels.
-3. **Want to discuss first?** Join [GitHub Discussions](https://github.com/AlignTrue/aligntrue/discussions).
+2. **Unsure what to work on?** Check [GitHub Issues](https://github.com/AlignTrue/aligntrue-sync/issues) for `good-first-issue` labels.
+3. **Want to discuss first?** Join [GitHub Discussions](https://github.com/AlignTrue/aligntrue-sync/discussions).
 
 ## Key workflows
 
@@ -69,9 +69,9 @@ We have zero tolerance for harassment, discrimination, or hostile behavior.
 
 ### I want to contribute but don't know what to work on
 
-- Browse [GitHub Issues](https://github.com/AlignTrue/aligntrue/issues) and filter by `good-first-issue`
-- Check [GitHub Issues](https://github.com/AlignTrue/aligntrue/issues?q=is%3Aissue+is%3Aopen+label%3Aaccepted) for accepted ideas
-- Ask in [GitHub Discussions](https://github.com/AlignTrue/aligntrue/discussions)
+- Browse [GitHub Issues](https://github.com/AlignTrue/aligntrue-sync/issues) and filter by `good-first-issue`
+- Check [GitHub Issues](https://github.com/AlignTrue/aligntrue-sync/issues?q=is%3Aissue+is%3Aopen+label%3Aaccepted) for accepted ideas
+- Ask in [GitHub Discussions](https://github.com/AlignTrue/aligntrue-sync/discussions)
 
 ### What if my work is incomplete?
 
@@ -104,23 +104,23 @@ We have zero tolerance for harassment, discrimination, or hostile behavior.
 
 ### Code references
 
-- [Schema validation](https://github.com/AlignTrue/aligntrue/tree/main/packages/schema)
-- [CLI commands](https://github.com/AlignTrue/aligntrue/tree/main/packages/cli)
-- [Core library](https://github.com/AlignTrue/aligntrue/tree/main/packages/core)
-- [Exporters](https://github.com/AlignTrue/aligntrue/tree/main/packages/exporters)
+- [Schema validation](https://github.com/AlignTrue/aligntrue-sync/tree/main/packages/schema)
+- [CLI commands](https://github.com/AlignTrue/aligntrue-sync/tree/main/packages/cli)
+- [Core library](https://github.com/AlignTrue/aligntrue-sync/tree/main/packages/core)
+- [Exporters](https://github.com/AlignTrue/aligntrue-sync/tree/main/packages/exporters)
 
 ### Examples
 
-- [`examples/aligns/README.md`](https://github.com/AlignTrue/aligntrue/tree/main/examples/aligns/README.md) — ready-to-use rule sets and authoring patterns
-- [`examples/golden-repo`](https://github.com/AlignTrue/aligntrue/tree/main/examples/golden-repo) — end-to-end baseline repo with overlays scenarios
-- [`examples/overlays-demo`](https://github.com/AlignTrue/aligntrue/tree/main/examples/overlays-demo) — focused overlays walkthrough
+- [`examples/aligns/README.md`](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/aligns/README.md) — ready-to-use rule sets and authoring patterns
+- [`examples/golden-repo`](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/golden-repo) — end-to-end baseline repo with overlays scenarios
+- [`examples/overlays-demo`](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/overlays-demo) — focused overlays walkthrough
 
 ## Getting help
 
 Stuck or need guidance?
 
-- **Issues**: [GitHub Issues](https://github.com/AlignTrue/aligntrue/issues) — Report bugs or ask for features
-- **Discussions**: [GitHub Discussions](https://github.com/AlignTrue/aligntrue/discussions) — Ask questions, share ideas
+- **Issues**: [GitHub Issues](https://github.com/AlignTrue/aligntrue-sync/issues) — Report bugs or ask for features
+- **Discussions**: [GitHub Discussions](https://github.com/AlignTrue/aligntrue-sync/discussions) — Ask questions, share ideas
 - **Documentation**: [Full docs](/docs) — Search for concepts or commands
 - **Development guide**: [Setup and workflow](/docs/06-development/setup)
 

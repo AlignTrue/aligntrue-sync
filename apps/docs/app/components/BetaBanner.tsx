@@ -32,7 +32,7 @@ export function BetaBanner() {
     if (mounted) {
       document.documentElement.style.setProperty(
         "--banner-height",
-        dismissed ? "0px" : "48px",
+        dismissed ? "0px" : "48px"
       );
     }
   }, [mounted, dismissed]);
@@ -89,7 +89,7 @@ export function BetaBanner() {
         >
           <span>🚀 AlignTrue is in beta. </span>
           <a
-            href="https://github.com/AlignTrue/aligntrue"
+            href="https://github.com/AlignTrue/aligntrue-sync"
             target="_blank"
             rel="noopener noreferrer"
             style={{

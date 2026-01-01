@@ -93,7 +93,7 @@ export class MyExporterExporter implements ExporterPlugin {
 
   async export(
     request: ScopedExportRequest,
-    options: ExportOptions,
+    options: ExportOptions
   ): Promise<ExportResult> {
     const { scope, rules, outputPath } = request;
     const { outputDir, dryRun, backup } = options;
@@ -355,8 +355,8 @@ Before submitting your PR:
 
 ## Questions?
 
-- Open an issue: https://github.com/AlignTrue/aligntrue/issues
-- Discussions: https://github.com/AlignTrue/aligntrue/discussions
+- Open an issue: https://github.com/AlignTrue/aligntrue-sync/issues
+- Discussions: https://github.com/AlignTrue/aligntrue-sync/discussions
 
 ## License
 

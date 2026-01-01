@@ -492,7 +492,7 @@ aligntrue sources split
 
 ## Example
 
-See the [multi-file-rules example](https://github.com/AlignTrue/aligntrue/tree/main/examples/multi-file-rules) for a complete working example with:
+See the [multi-file-rules example](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/multi-file-rules) for a complete working example with:
 
 - Multiple source files organized by concern
 - Custom merge order

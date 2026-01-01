@@ -116,7 +116,7 @@ export function SiteHeader() {
                 </Link>
               </Button>
               <a
-                href="https://github.com/AlignTrue/aligntrue"
+                href="https://github.com/AlignTrue/aligntrue-sync"
                 target="_blank"
                 rel="noreferrer"
                 className="text-foreground inline-flex items-center justify-center"
@@ -202,7 +202,7 @@ export function SiteHeader() {
             </Link>
           </Button>
           <a
-            href="https://github.com/AlignTrue/aligntrue"
+            href="https://github.com/AlignTrue/aligntrue-sync"
             target="_blank"
             rel="noreferrer"
             onClick={() => setMobileMenuOpen(false)}

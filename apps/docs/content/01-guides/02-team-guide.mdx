@@ -9,7 +9,7 @@ This guide shows how teams use AlignTrue to maintain consistent AI agent behavio
 
 > **Quick start guide** for team collaboration. For comprehensive reference on team mode features and configuration, see [Team Mode Concepts](/docs/03-concepts/team-mode).
 
-> **See it in action:** Check out the [team repo example](https://github.com/AlignTrue/aligntrue/tree/main/examples/team-repo) for team workflows, and [overlays example](https://github.com/AlignTrue/aligntrue/tree/main/examples/overlays-demo) for customization patterns.
+> **See it in action:** Check out the [team repo example](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/team-repo) for team workflows, and [overlays example](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/overlays-demo) for customization patterns.
 
 ## Quick team setup
 
@@ -176,7 +176,7 @@ Add sources to `.aligntrue/config.team.yaml`:
 ```yaml
 sources:
   - type: git
-    url: https://github.com/AlignTrue/aligntrue
+    url: https://github.com/AlignTrue/aligntrue-sync
     path: examples/aligns/global.yaml
   - type: git
     url: https://github.com/org/standards
@@ -475,7 +475,7 @@ aligntrue drift
 
 # Output:
 # Upstream drift detected:
-#   git:https://github.com/AlignTrue/aligntrue/examples/aligns/global.yaml
+#   git:https://github.com/AlignTrue/aligntrue-sync/examples/aligns/global.yaml
 #   - Current: sha256:abc123...
 #   - Latest: sha256:def456...
 #   - Changes: 3 new rules, 2 modified rules
@@ -597,7 +597,7 @@ aligntrue drift
 
 # Output:
 # UPSTREAM DRIFT:
-#   git:https://github.com/AlignTrue/aligntrue/examples/aligns/global.yaml
+#   git:https://github.com/AlignTrue/aligntrue-sync/examples/aligns/global.yaml
 #     Upstream align has been updated (base_hash differs)
 #     Lockfile: sha256:abc123...
 #     Allowed: sha256:def456...

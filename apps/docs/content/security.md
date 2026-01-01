@@ -13,7 +13,7 @@ AlignTrue is designed with security and privacy as core principles: local-first 
 
 Instead, please use GitHub's private vulnerability reporting feature:
 
-1. Go to https://github.com/AlignTrue/aligntrue/security/advisories
+1. Go to https://github.com/AlignTrue/aligntrue-sync/security/advisories
 2. Click "Report a vulnerability"
 3. Fill out the form with details about the vulnerability
 

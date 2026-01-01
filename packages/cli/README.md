@@ -15,7 +15,7 @@ pnpm install -g @aligntrue/cli
 Use this path when you want to test unreleased commits from `main`. The CLI relies on other AlignTrue workspace packages, so a workspace-wide build is required before running the binary.
 
 ```bash
-git clone https://github.com/AlignTrue/aligntrue.git
+git clone https://github.com/AlignTrue/aligntrue-sync.git
 cd aligntrue
 pnpm install          # installs all workspace deps
 pnpm build            # builds every package the CLI imports

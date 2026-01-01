@@ -116,7 +116,7 @@ After pushing these files, the workflow starts on next pull request:
 
 To verify security patch auto-merge works:
 
-1. **Check a recent security alert:** Visit https://github.com/AlignTrue/aligntrue/security/dependabot
+1. **Check a recent security alert:** Visit https://github.com/AlignTrue/aligntrue-sync/security/dependabot
 2. **Wait for next Dependabot run** (Mondays, or trigger manually with `gh workflow run`)
 3. **Look for security-specific comment:** If Dependabot creates a PR with "security" label or "Dependabot security update" in body, the workflow will:
    - Show `🔒 Auto-approved: Security patch` comment

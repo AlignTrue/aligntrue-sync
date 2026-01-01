@@ -11,7 +11,7 @@ Thank you for your interest in contributing to AlignTrue! This guide will help y
 
 Get started creating Aligns:
 
-1. **Review examples** in the [`examples/aligns/`](https://github.com/AlignTrue/aligntrue/tree/main/examples/aligns) directory
+1. **Review examples** in the [`examples/aligns/`](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/aligns) directory
 2. **Create** your Align following the [template](#minimal-example)
 3. **Share** via GitHub URL, local file, or your own repository
 
@@ -21,7 +21,7 @@ No central registry exists - share Aligns however works best for your team.
 
 ### Review examples
 
-Browse example Aligns in [`examples/aligns/`](https://github.com/AlignTrue/aligntrue/tree/main/examples/aligns) in this repository.
+Browse example Aligns in [`examples/aligns/`](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/aligns) in this repository.
 
 Examples include:
 
@@ -96,7 +96,7 @@ All TypeScript projects must include `tsconfig.json`. Use `npx tsc --init` if mi
 
 Enable strict mode for better type safety and fewer runtime errors.
 
-For more examples, browse existing Aligns in the [`examples/aligns/`](https://github.com/AlignTrue/aligntrue/tree/main/examples/aligns) directory.
+For more examples, browse existing Aligns in the [`examples/aligns/`](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/aligns) directory.
 
 ## Testing locally
 
@@ -286,17 +286,17 @@ We have zero tolerance for harassment, discrimination, or hostile behavior.
 Stuck? Here's how to get help:
 
 - **Documentation**: Read the full docs at [aligntrue.ai/docs](/docs)
-  - [Schema validation](https://github.com/AlignTrue/aligntrue/tree/main/packages/schema) - IR validation and type definitions
-  - [Canonicalization](https://github.com/AlignTrue/aligntrue/tree/main/packages/schema/src/canonicalize.ts) - Deterministic hashing
+  - [Schema validation](https://github.com/AlignTrue/aligntrue-sync/tree/main/packages/schema) - IR validation and type definitions
+  - [Canonicalization](https://github.com/AlignTrue/aligntrue-sync/tree/main/packages/schema/src/canonicalize.ts) - Deterministic hashing
 
-- **Examples**: Browse example Aligns in [`examples/aligns/`](https://github.com/AlignTrue/aligntrue/tree/main/examples/aligns)
-  - [testing.md](https://github.com/AlignTrue/aligntrue/blob/main/examples/aligns/testing.md) - Testing rules
-  - [security.md](https://github.com/AlignTrue/aligntrue/blob/main/examples/aligns/security.md) - Security rules
-  - [nextjs_app_router.md](https://github.com/AlignTrue/aligntrue/blob/main/examples/aligns/nextjs_app_router.md) - Stack-specific rules
+- **Examples**: Browse example Aligns in [`examples/aligns/`](https://github.com/AlignTrue/aligntrue-sync/tree/main/examples/aligns)
+  - [testing.md](https://github.com/AlignTrue/aligntrue-sync/blob/main/examples/aligns/testing.md) - Testing rules
+  - [security.md](https://github.com/AlignTrue/aligntrue-sync/blob/main/examples/aligns/security.md) - Security rules
+  - [nextjs_app_router.md](https://github.com/AlignTrue/aligntrue-sync/blob/main/examples/aligns/nextjs_app_router.md) - Stack-specific rules
 
-- **Discussions**: Ask questions in [GitHub Discussions](https://github.com/AlignTrue/aligntrue/discussions)
+- **Discussions**: Ask questions in [GitHub Discussions](https://github.com/AlignTrue/aligntrue-sync/discussions)
 
-- **Issues**: Report bugs or problems in [GitHub Issues](https://github.com/AlignTrue/aligntrue/issues)
+- **Issues**: Report bugs or problems in [GitHub Issues](https://github.com/AlignTrue/aligntrue-sync/issues)
 
 ## Sharing with the community
 
@@ -305,7 +305,7 @@ Consider sharing your Align with the community:
 1. **GitHub repository** - Create a public repo with your Aligns
 2. **Documentation** - Add a README explaining what your Aligns do
 3. **Examples** - Include usage examples and configuration
-4. **Community** - Share in [GitHub Discussions](https://github.com/AlignTrue/aligntrue/discussions)
+4. **Community** - Share in [GitHub Discussions](https://github.com/AlignTrue/aligntrue-sync/discussions)
 
 Well-documented Aligns help others learn and adopt best practices.
 
@@ -359,8 +359,8 @@ aligntrue sync
 If this guide doesn't answer your question:
 
 - Check the [documentation](/docs)
-- Search [existing discussions](https://github.com/AlignTrue/aligntrue/discussions)
-- Open a [new discussion](https://github.com/AlignTrue/aligntrue/discussions/new)
+- Search [existing discussions](https://github.com/AlignTrue/aligntrue-sync/discussions)
+- Open a [new discussion](https://github.com/AlignTrue/aligntrue-sync/discussions/new)
 
 We're here to help!
 

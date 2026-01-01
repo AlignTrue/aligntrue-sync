@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-const URL = "https://github.com/AlignTrue/aligntrue/blob/main/rules/example.md";
+const URL =
+  "https://github.com/AlignTrue/aligntrue-sync/blob/main/rules/example.md";
 
 const redisStore = new Map<string, unknown>();
 

@@ -393,7 +393,6 @@ export default [
       "archive/**",
       ".archive/**",
       "eslint.config.js", // Config file doesn't use rules it defines
-      "platform/ops-core/**/*.d.ts", // TS project config excludes these declaration files
     ],
   },
   {
@@ -609,102 +608,6 @@ export default [
       // - UI components use safe SVG/React props
       // See packages/core/docs/SECURITY.md for path validation details
       "security/detect-object-injection": "off",
-    },
-  },
-  {
-    files: ["platform/ops-core/**/*.ts"],
-    rules: {
-      // Platform kernel runs after CLI/API validation; data is trusted at this layer.
-      // Object iteration uses static field lists or own keys; no user-controlled keys flow here.
-      // Storage paths are internal defaults, not user input; higher layers enforce validation.
-      // See .cursor/rules/security_linting_policy.mdc (Trust Boundaries) for rationale.
-      "security/detect-object-injection": "off",
-      "security/detect-non-literal-fs-filename": "off",
-      "no-restricted-imports": [
-        "error",
-        {
-          patterns: [
-            {
-              group: ["**/ops-shared/**", "**/packs/**"],
-              message:
-                "ops-core cannot import from ops-shared or packs (constitution Section 7).",
-            },
-            {
-              group: ["@aligntrue/pack-*"],
-              message:
-                "ops-core cannot import from packs (use contracts/interfaces only).",
-            },
-          ],
-        },
-      ],
-    },
-  },
-  {
-    files: ["platform/ops-shared/**/*.ts"],
-    rules: {
-      "no-restricted-imports": [
-        "error",
-        {
-          patterns: [
-            {
-              group: ["**/packs/**"],
-              message:
-                "ops-shared cannot import from packs (constitution Section 7).",
-            },
-            {
-              group: [
-                "@aligntrue/ops-core/dist/**",
-                "@aligntrue/ops-core/src/**",
-              ],
-              message: "ops-shared must use ops-core public exports only.",
-            },
-          ],
-        },
-      ],
-    },
-  },
-  {
-    files: ["platform/packs/**/*.ts"],
-    rules: {
-      "no-restricted-imports": [
-        "error",
-        {
-          patterns: [
-            {
-              group: [
-                "../**/packs/**",
-                "**/ops-shared/**/src/**",
-                "**/ops-core/**/src/**",
-              ],
-              message:
-                "packs cannot import other packs directly or deep-import ops-core/ops-shared (use package exports/contracts).",
-            },
-          ],
-        },
-      ],
-    },
-  },
-  {
-    files: ["platform/ui-blocks/src/blocks/**/*.{ts,tsx}"],
-    rules: {
-      "no-restricted-imports": [
-        "error",
-        {
-          patterns: [
-            {
-              group: ["@/components/ui/*", "**/components/ui/*"],
-              message:
-                "Use platform/ui-blocks/src/ui wrappers instead of importing shadcn primitives directly.",
-            },
-          ],
-        },
-      ],
-    },
-  },
-  {
-    files: ["platform/ui-blocks/src/ui/**/*.{ts,tsx}"],
-    rules: {
-      "no-restricted-imports": "off",
     },
   },
   {
