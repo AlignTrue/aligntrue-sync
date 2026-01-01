@@ -1,9 +1,9 @@
-<!--
+<!-- 
   ⚠️  AUTO-GENERATED FILE - DO NOT EDIT DIRECTLY
-
+  
   This file is generated from documentation source.
   To make changes, edit the source file and run: pnpm generate:repo-files
-
+  
   Source: apps/docs/content/06-development/*.md
 -->
 
@@ -29,6 +29,7 @@
 - [Workspace structure](#workspace-structure)
 
 ---
+
 
 # Architecture in 10 minutes
 
@@ -70,7 +71,9 @@ graph LR
 
 Keep changes small and update golden tests when exporter or schema outputs move.
 
+
 ---
+
 
 # Architecture
 
@@ -430,7 +433,9 @@ This ensures determinism matches CI exactly.
 - Explore [development commands](https://sync.aligntrue.ai/docs/06-development/commands)
 - Learn [code standards](https://sync.aligntrue.ai/docs/06-development/code-standards)
 
+
 ---
+
 
 # Archiving components checklist
 
@@ -651,7 +656,9 @@ This real example shows the process:
 - [Development setup](https://sync.aligntrue.ai/docs/06-development/setup)
 - [CHANGELOG](/CHANGELOG.md)
 
+
 ---
+
 
 # CI guide
 
@@ -990,7 +997,9 @@ pnpm typecheck
 - Review [setup guide](https://sync.aligntrue.ai/docs/06-development/setup)
 - Learn [test maintenance](https://sync.aligntrue.ai/docs/06-development/test-maintenance) for handling test failures
 
+
 ---
+
 
 # Code standards
 
@@ -1258,7 +1267,9 @@ pnpm validate:docs
 - [Architecture](https://sync.aligntrue.ai/docs/06-development/architecture) for design principles
 - [Test maintenance](https://sync.aligntrue.ai/docs/06-development/test-maintenance) for test strategy
 
+
 ---
+
 
 # Development commands
 
@@ -1559,7 +1570,9 @@ Example: `feat: add new command` or `fix: resolve memory leak`
 - Understand [architecture concepts](https://sync.aligntrue.ai/docs/06-development/architecture)
 - Learn [CI validation](https://sync.aligntrue.ai/docs/06-development/ci) to prevent failures
 
+
 ---
+
 
 # Dependabot auto-merge strategy
 
@@ -1696,7 +1709,9 @@ To confirm majors and other risky updates stay manual:
 - [GitHub auto-merge API](https://docs.github.com/en/rest/pulls/merges?apiVersion=2022-11-28#enable-auto-merge-for-a-pull-request)
 - [CI guide](https://sync.aligntrue.ai/docs/06-development/ci)
 
+
 ---
+
 
 # Add a new exporter
 
@@ -1728,7 +1743,9 @@ Follow this recipe to add an agent exporter without guesswork.
 - `pnpm check` and `pnpm --filter @aligntrue/exporters test` are green.
 - Docs updated for user-facing behavior.
 
+
 ---
+
 
 # Package exports
 
@@ -1854,7 +1871,9 @@ CI will validate that:
 - Type definitions (`.d.ts`) are automatically generated during build
 - Exports must use ES modules format (`type: "module"` in package.json)
 
+
 ---
+
 
 # Release process
 
@@ -2085,7 +2104,9 @@ If git operations fail after publishing:
 - [Semantic Versioning](https://semver.org/)
 - [Keep a Changelog](https://keepachangelog.com/)
 
+
 ---
+
 
 # Development setup
 
@@ -2098,15 +2119,15 @@ If git operations fail after publishing:
 
 <Tabs items={["npm", "yarn", "Homebrew (macOS)", "Direct"]}>
 
-<Tabs.Tab>`bash npm install -g pnpm@10 `</Tabs.Tab>
+<Tabs.Tab>```bash npm install -g pnpm@10 ```</Tabs.Tab>
 
-<Tabs.Tab>`bash yarn global add pnpm@10 `</Tabs.Tab>
+<Tabs.Tab>```bash yarn global add pnpm@10 ```</Tabs.Tab>
 
-<Tabs.Tab>`bash brew install pnpm pnpm env use --global 10 `</Tabs.Tab>
+<Tabs.Tab>```bash brew install pnpm pnpm env use --global 10 ```</Tabs.Tab>
 
 <Tabs.Tab>
-Visit [pnpm.io](https://pnpm.io/installation) for platform-specific
-installers.
+  Visit [pnpm.io](https://pnpm.io/installation) for platform-specific
+  installers.
 </Tabs.Tab>
 
 </Tabs>
@@ -2406,7 +2427,9 @@ base64 -b 0 private-key.pem  # macOS (use `base64 -w0` on Linux)
 - Explore [development commands](https://sync.aligntrue.ai/docs/06-development/commands)
 - Understand [CI validation and troubleshooting](https://sync.aligntrue.ai/docs/06-development/ci)
 
+
 ---
+
 
 # Stability and compatibility
 
@@ -2444,7 +2467,9 @@ These are labeled as experimental in CLI help and may introduce breaking changes
 - Document compatibility impact in `CHANGELOG.md` for any non-trivial change.
 - Gate experimental behavior behind flags or clearly labeled help text; do not silently change stable contracts.
 
+
 ---
+
 
 # Test maintenance: Core format and path changes
 
@@ -2556,7 +2581,9 @@ The pre-push hook catches these failures before they hit `main`, but:
 
 - [Development setup](https://sync.aligntrue.ai/docs/06-development/setup)
 
+
 ---
+
 
 # Workspace structure
 
@@ -2834,8 +2861,11 @@ pnpm --filter @aligntrue/cli build
 - Understand [architecture concepts](https://sync.aligntrue.ai/docs/06-development/architecture)
 - Review [CI guide](https://sync.aligntrue.ai/docs/06-development/ci) for validation workflows
 
----
 
 ---
 
-_This file is auto-generated from the AlignTrue documentation site. To make changes, edit the source files in `apps/docs/content/` and run `pnpm generate:repo-files`._
+
+
+---
+
+*This file is auto-generated from the AlignTrue documentation site. To make changes, edit the source files in `apps/docs/content/` and run `pnpm generate:repo-files`.*
