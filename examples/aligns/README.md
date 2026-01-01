@@ -19,7 +19,7 @@ sources:
 Or use raw GitHub URLs:
 
 ```bash
-curl -o .aligntrue/rules.md https://raw.githubusercontent.com/AlignTrue/aligntrue/main/examples/aligns/global.md
+curl -o .aligntrue/rules.md https://raw.githubusercontent.com/AlignTrue/aligntrue-sync/main/examples/aligns/global.md
 ```
 
 ### Copy locally

@@ -56,7 +56,7 @@ export function SiteFooter() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://img.shields.io/github/actions/workflow/status/AlignTrue/aligntrue/ci.yml?label=CI&logo=github"
+              src="https://img.shields.io/github/actions/workflow/status/AlignTrue/aligntrue-sync/ci.yml?label=CI&logo=github"
               alt="CI status"
               loading="lazy"
               className="h-5 block"

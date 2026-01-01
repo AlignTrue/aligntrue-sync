@@ -62,7 +62,7 @@ function DocsFooter() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://img.shields.io/github/actions/workflow/status/AlignTrue/aligntrue/ci.yml?label=CI"
+              src="https://img.shields.io/github/actions/workflow/status/AlignTrue/aligntrue-sync/ci.yml?label=CI"
               alt="CI Status"
               style={{ height: "20px", display: "block" }}
             />
@@ -104,7 +104,7 @@ function DocsFooter() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://img.shields.io/github/actions/workflow/status/AlignTrue/aligntrue/codeql.yml?label=security&logo=github"
+              src="https://img.shields.io/github/actions/workflow/status/AlignTrue/aligntrue-sync/codeql.yml?label=security&logo=github"
               alt="Security Scan Status"
               style={{ height: "20px", display: "block" }}
             />
@@ -118,7 +118,7 @@ function DocsFooter() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://img.shields.io/github/last-commit/AlignTrue/aligntrue?color=9ca3af&logo=github"
+              src="https://img.shields.io/github/last-commit/AlignTrue/aligntrue-sync?color=9ca3af&logo=github"
               alt="Last commit"
               style={{ height: "20px", display: "block" }}
             />
