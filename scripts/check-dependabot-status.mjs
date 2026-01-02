@@ -22,7 +22,7 @@ import {
 
 // Configuration
 const CONFIG = {
-  REPO: "AlignTrue/aligntrue",
+  REPO: "AlignTrue/aligntrue-sync",
   MIN_RATE_LIMIT: 30, // Minimum API calls remaining to proceed
   MIN_RATE_LIMIT_MERGE: 50, // Higher threshold for merge operations
 };

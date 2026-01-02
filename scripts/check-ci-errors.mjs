@@ -23,7 +23,7 @@ import {
 
 // Configuration
 const CONFIG = {
-  REPO: "AlignTrue/aligntrue",
+  REPO: "AlignTrue/aligntrue-sync",
   MIN_RATE_LIMIT: 50, // Minimum API calls remaining to proceed
   RUN_LIMIT: 5, // Number of runs to check for failures
 };

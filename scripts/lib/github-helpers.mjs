@@ -13,7 +13,7 @@
 import { execSync } from "child_process";
 
 // Default repository (can be overridden by importing scripts)
-export const DEFAULT_REPO = "AlignTrue/aligntrue";
+export const DEFAULT_REPO = "AlignTrue/aligntrue-sync";
 
 // ANSI Colors for terminal output
 export const COLORS = {
