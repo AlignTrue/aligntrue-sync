@@ -2112,30 +2112,18 @@ If git operations fail after publishing:
 
 ## Prerequisites
 
-- **Node.js** 20 or later (`.node-version` pins 20.18.1 for Volta/asdf/nvm)
-- **pnpm** 10 (repo sets `packageManager: pnpm@10.0.0`; `engines.pnpm` is >=9)
+- **Node.js** 20 or later (repo `engines.node` is `>=20`)
+- **pnpm** 10 (repo sets `packageManager: pnpm@10.27.0`; `engines.pnpm` is `>=10.26.0`)
 
 **Install pnpm:**
 
 <Tabs items={["npm", "yarn", "Homebrew (macOS)", "Direct"]}>
 
-<Tabs.Tab>
-  ```bash
-  npm install -g pnpm@10
-  ```
-</Tabs.Tab>
+<Tabs.Tab>```bash npm install -g pnpm@10.27.0 ```</Tabs.Tab>
 
-<Tabs.Tab>
-  ```bash
-  yarn global add pnpm@10
-  ```
-</Tabs.Tab>
+<Tabs.Tab>```bash yarn global add pnpm@10.27.0 ```</Tabs.Tab>
 
-<Tabs.Tab>
-  ```bash
-  brew install pnpm pnpm env use --global 10
-  ```
-</Tabs.Tab>
+<Tabs.Tab>```bash brew install pnpm && pnpm env use --global 10.27.0 ```</Tabs.Tab>
 
 <Tabs.Tab>
   Visit [pnpm.io](https://pnpm.io/installation) for platform-specific
