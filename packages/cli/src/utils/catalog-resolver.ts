@@ -2,7 +2,7 @@ import { existsSync } from "fs";
 
 const CATALOG_ID_PATTERN = /^[a-zA-Z0-9_-]{11}$/;
 const CATALOG_URL_PATTERN =
-  /^https?:\/\/aligntrue\.ai\/a\/([a-zA-Z0-9_-]{11})$/;
+  /^https?:\/\/(?:sync\.)?aligntrue\.ai\/a\/([a-zA-Z0-9_-]{11})$/;
 
 export function isCatalogId(input: string): boolean {
   const trimmed = input.trim();
