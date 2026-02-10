@@ -87,18 +87,7 @@ export function SiteHeader() {
               >
                 Features
               </a>
-              <Link
-                href="/catalog"
-                className="text-sm text-foreground no-underline"
-              >
-                Import
-              </Link>
-              <Link
-                href="/catalog#catalog"
-                className="text-sm text-foreground no-underline"
-              >
-                Catalog
-              </Link>
+              {/* Catalog/import nav links intentionally hidden for now. */}
               <a
                 href="/docs/about"
                 className="text-sm text-foreground no-underline"
@@ -167,20 +156,7 @@ export function SiteHeader() {
           >
             Features
           </a>
-          <Link
-            href="/#page-top"
-            onClick={() => setMobileMenuOpen(false)}
-            className="px-4 py-3 text-base no-underline text-foreground rounded-md transition-colors hover:bg-muted"
-          >
-            Import
-          </Link>
-          <Link
-            href="/catalog#catalog"
-            onClick={() => setMobileMenuOpen(false)}
-            className="px-4 py-3 text-base no-underline text-foreground rounded-md transition-colors hover:bg-muted"
-          >
-            Rule Catalog
-          </Link>
+          {/* Catalog/import nav links intentionally hidden for now. */}
           <a
             href="/docs/about"
             onClick={() => setMobileMenuOpen(false)}

@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import type { Route } from "next";
-import { useCallback, useEffect, useId, useRef, useState } from "react";
 import {
   FileText,
   Globe,
@@ -17,114 +16,10 @@ import { HowItWorksDiagram } from "./components/HowItWorksDiagram";
 import { GitHubIcon } from "./components/GitHubIcon";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { getSubmittedUrlFromSearch } from "@/lib/aligns/urlFromSearch";
 import { CommandBlock } from "@/components/CommandBlock";
 import { PageLayout } from "@/components/PageLayout";
-import { SkeletonCard } from "@/components/SkeletonCard";
-import { AlignCard } from "./components/AlignCard";
-import { RuleImportCard } from "@/components/RuleImportCard";
-import { useVisibilityRecovery } from "@/lib/useVisibilityRecovery";
-import { isAbortError } from "@/lib/utils";
-import type { AlignSummary } from "@/lib/aligns/transforms";
-
-async function fetchList(
-  path: string,
-  init?: RequestInit,
-): Promise<AlignSummary[]> {
-  const response = await fetch(path, init);
-  if (!response.ok) return [];
-  return (await response.json()) as AlignSummary[];
-}
 
 export function HomePageClient() {
-  const recentAbortRef = useRef<AbortController | null>(null);
-  const [activeTab, setActiveTab] = useState<"rules" | "cli">("cli");
-  const tabsBaseId = useId();
-  const cliTriggerId = `${tabsBaseId}-trigger-cli`;
-  const cliContentId = `${tabsBaseId}-content-cli`;
-  const rulesTriggerId = `${tabsBaseId}-trigger-rules`;
-  const rulesContentId = `${tabsBaseId}-content-rules`;
-  const [initialImportUrl, setInitialImportUrl] = useState<string | null>(null);
-  const [recent, setRecent] = useState<AlignSummary[]>([]);
-  const [recentLoading, setRecentLoading] = useState(true);
-
-  useEffect(() => {
-    const candidate = getSubmittedUrlFromSearch(window.location.search);
-    if (!candidate) return;
-    setActiveTab("rules");
-    setInitialImportUrl(candidate);
-  }, []);
-
-  const loadRecentAligns = useCallback(async (signal?: AbortSignal) => {
-    const controller = signal ? null : new AbortController();
-    const activeSignal = signal ?? controller!.signal;
-
-    if (controller) {
-      // Cancel any in-flight request before starting a new one.
-      if (recentAbortRef.current) {
-        recentAbortRef.current.abort();
-      }
-      recentAbortRef.current = controller;
-    }
-
-    setRecentLoading(true);
-    try {
-      const result = await fetchList("/api/aligns/recent?limit=8", {
-        signal: activeSignal,
-      });
-      if (!activeSignal.aborted) {
-        setRecent(result);
-      }
-    } catch (err) {
-      if (!isAbortError(err)) {
-        console.error("Failed to load recent aligns", err);
-      }
-    } finally {
-      if (!activeSignal.aborted) {
-        setRecentLoading(false);
-      }
-    }
-  }, []);
-
-  useEffect(() => {
-    const controller = new AbortController();
-    void loadRecentAligns(controller.signal);
-    return () => controller.abort();
-  }, [loadRecentAligns]);
-
-  useVisibilityRecovery(() => {
-    void loadRecentAligns();
-  });
-
-  useEffect(() => {
-    return () => {
-      if (recentAbortRef.current) {
-        recentAbortRef.current.abort();
-      }
-    };
-  }, []);
-
-  const renderCards = (items: AlignSummary[]) => {
-    const limited = items.slice(0, 6);
-    if (!limited.length) return null;
-    return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-1">
-        {limited.map((item) => (
-          <AlignCard key={item.id} align={item} />
-        ))}
-      </div>
-    );
-  };
-
-  const renderSkeletonCards = () => (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {Array.from({ length: 6 }).map((_, idx) => (
-        <SkeletonCard key={`skeleton-${idx}`} />
-      ))}
-    </div>
-  );
-
   const renderCLITab = () => (
     <div className="grid gap-4 sm:grid-cols-2 max-w-5xl mx-auto">
       {[
@@ -145,8 +40,7 @@ export function HomePageClient() {
           command: "aligntrue init",
           text: (
             <>
-              Auto-detects existing rules, imports them, and syncs or creates
-              smart defaults.
+              Auto-detects existing rules and syncs or creates smart defaults.
             </>
           ),
         },
@@ -209,51 +103,9 @@ export function HomePageClient() {
             <strong>Start in 60 seconds.</strong>
           </p>
 
-          <Tabs
-            value={activeTab}
-            onValueChange={(v) => setActiveTab(v as "rules" | "cli")}
-            className="w-full fade-in-up"
-            data-delay="3"
-          >
-            <TabsList className="w-full max-w-xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-1 rounded-xl bg-muted/70 border border-border p-1.5 shadow-sm">
-              <TabsTrigger
-                id={cliTriggerId}
-                aria-controls={cliContentId}
-                value="cli"
-                className="text-base px-4 py-2"
-              >
-                Install CLI
-              </TabsTrigger>
-              <TabsTrigger
-                id={rulesTriggerId}
-                aria-controls={rulesContentId}
-                value="rules"
-                className="text-base px-4 py-2"
-              >
-                Import Rules
-              </TabsTrigger>
-            </TabsList>
-            <div className="mt-4">
-              <TabsContent
-                id={cliContentId}
-                aria-labelledby={cliTriggerId}
-                value="cli"
-              >
-                {renderCLITab()}
-              </TabsContent>
-              <TabsContent
-                id={rulesContentId}
-                aria-labelledby={rulesTriggerId}
-                value="rules"
-              >
-                <RuleImportCard
-                  loadingText="Generating..."
-                  initialUrl={initialImportUrl ?? undefined}
-                  autoSubmitOnInitialUrl
-                />
-              </TabsContent>
-            </div>
-          </Tabs>
+          <div className="w-full fade-in-up mt-4" data-delay="3">
+            {renderCLITab()}
+          </div>
 
           <div
             className="flex flex-wrap justify-center gap-3 fade-in-up"
@@ -304,7 +156,7 @@ export function HomePageClient() {
               {
                 icon: Zap,
                 title: "60-second setup",
-                text: "Auto-detect agents, import existing rules, and sync in under a minute.",
+                text: "Auto-detect agents, detect existing rules, and sync in under a minute.",
               },
               {
                 icon: RefreshCw,
@@ -410,64 +262,7 @@ export function HomePageClient() {
         </div>
       </section>
 
-      {(recentLoading || recent.length > 0) && (
-        <section
-          id="catalog"
-          className="px-4 sm:px-6 py-16 bg-muted border-y border-border"
-          aria-labelledby="ai-rule-catalog-heading"
-        >
-          <div className="max-w-6xl mx-auto space-y-6">
-            <div className="space-y-3 text-center">
-              <SectionBadge>Discover Better Rules</SectionBadge>
-              <h2
-                id="ai-rule-catalog-heading"
-                className="text-3xl md:text-4xl font-bold text-foreground"
-              >
-                AI rule catalog
-              </h2>
-              <p className="text-sm md:text-base text-muted-foreground max-w-3xl mx-auto leading-7 text-balance">
-                See recently submitted rules below, browse the full{" "}
-                <Link
-                  href={{ pathname: "/catalog", hash: "catalog" }}
-                  className="text-primary font-semibold hover:underline"
-                >
-                  rule catalog
-                </Link>{" "}
-                or{" "}
-                <Link
-                  href="/catalog"
-                  className="text-primary font-semibold hover:underline"
-                >
-                  import & share&nbsp;
-                </Link>
-                your own.
-              </p>
-            </div>
-            <Card className="bg-gradient-to-br from-card via-card/95 to-muted/70 border border-border/80 shadow-xl">
-              <CardContent className="p-6 md:p-7 space-y-4">
-                <div className="flex items-center justify-between flex-wrap gap-2">
-                  <h3 className="text-lg font-semibold text-foreground m-0">
-                    Recent Aligns
-                  </h3>
-                  <Button asChild variant="outline" size="sm">
-                    <Link href={{ pathname: "/catalog", hash: "catalog" }}>
-                      View catalog
-                    </Link>
-                  </Button>
-                  {recentLoading ? null : recent.length === 0 ? (
-                    <span className="text-sm text-muted-foreground">
-                      No Aligns found
-                    </span>
-                  ) : null}
-                </div>
-                {recentLoading
-                  ? renderSkeletonCards()
-                  : recent.length > 0 && renderCards(recent)}
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-      )}
+      {/* Catalog section intentionally hidden for now. */}
 
       <section
         className="px-4 sm:px-6 py-14 text-center cta-surface text-foreground overflow-hidden border border-white/30 dark:border-white/10 shadow-[0_25px_80px_-40px_rgba(0,0,0,0.65)] ring-1 ring-black/5 dark:ring-white/5"
