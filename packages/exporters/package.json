@@ -39,7 +39,7 @@
     "@aligntrue/schema": "workspace:*",
     "ajv": "^8.18.0",
     "ajv-formats": "^3.0.1",
-    "yaml": "^2.8.2"
+    "yaml": "^2.8.3"
   },
   "license": "MIT",
   "engines": {
